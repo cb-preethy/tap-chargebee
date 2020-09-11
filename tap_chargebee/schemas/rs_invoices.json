@@ -1,0 +1,119 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": ["null", "string"]
+    },
+    "po_number": {
+      "type": ["null", "string"]
+    },
+    "is_recurring_invoice": {
+      "type": ["null", "boolean"]
+    },
+    "status": {
+      "type": ["null", "string"]
+    },
+    "vat_number": {
+      "type": ["null", "string"]
+    },
+    "price_type": {
+      "type": ["null", "string"]
+    },
+    "date": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "due_date": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "net_term_days": {
+      "type": ["null", "integer"]
+    },
+    "currency_code": {
+      "type": ["null", "string"]
+    },
+    "total": {
+      "type": ["null", "integer"]
+    },
+    "amount_paid": {
+      "type": ["null", "integer"]
+    },
+    "amount_adjusted": {
+      "type": ["null", "integer"]
+    },
+    "write_off_amount": {
+      "type": ["null", "integer"]
+    },
+    "credits_applied": {
+      "type": ["null", "integer"]
+    },
+    "amount_due": {
+      "type": ["null", "integer"]
+    },
+    "paid_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "dunning_status": {
+      "type": ["null", "string"]
+    },
+    "next_retry_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "voided_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "sub_total": {
+      "type": ["null", "integer"]
+    },
+    "total_tax_amount": {
+      "type": ["null", "integer"]
+    },
+    "is_first_invoice": {
+      "type": ["null", "boolean"]
+    },
+    "has_advance_charges": {
+      "type": ["null", "boolean"]
+    },
+    "expected_payment_date": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "amount_to_collect": {
+      "type": ["null", "integer"]
+    },
+    "round_off_amount": {
+      "type": ["null", "integer"]
+    },
+    "term_finalized": {
+      "type": ["null", "boolean"]
+    },
+    "is_gifted": {
+      "type": ["null", "boolean"]
+    },
+    "related_customers": {
+      "type": ["null", "string"]
+    },
+    "related_subscriptions": {
+      "type": ["null", "string"]
+    },
+    "payment_owner": {
+      "type": ["null", "string"]
+    },
+    "customer_id": {
+      "type": ["null", "string"]
+    },
+    "subscription_id": {
+      "type": ["null", "string"]
+    },
+    "resource_updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    }
+  }
+}   
+

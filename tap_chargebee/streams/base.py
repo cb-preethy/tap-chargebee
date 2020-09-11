@@ -15,6 +15,11 @@ LOGGER = singer.get_logger()
 
 
 class BaseChargebeeStream(BaseStream):
+    CB_URL = "https://{}.chargebee.com/api/v2/rs_data_export_fw_resources"
+    if os.environ.get('RS_API_URL'):
+        CB_URL = os.environ.get('RS_API_URL')
+        #CB_URL = "http://{}.localcb.in:8080/api/v2/rs_data_export_fw_resources"
+    RECORD_LIMIT = 1000
 
     def write_schema(self):
         singer.write_schema(
@@ -46,6 +51,8 @@ class BaseChargebeeStream(BaseStream):
 
         for field_name, field_schema in schema.get('properties').items():
             inclusion = 'available'
+            if self.TABLE.startswith("rs_"):
+                inclusion = "automatic"
 
             if field_name in self.KEY_PROPERTIES or field_name in self.BOOKMARK_PROPERTIES:
                 inclusion = 'automatic'
@@ -72,36 +79,12 @@ class BaseChargebeeStream(BaseStream):
             'metadata': singer.metadata.to_list(mdata)
         }]
 
-    def appendCustomFields(self, record):
-        listOfCustomFieldObj = ['addon', 'plan', 'subscription', 'customer']
-        custom_fields = {}
-        event_custom_fields = {}
-        if self.ENTITY == 'event':
-            content = record['content']
-            words = record['event_type'].split("_")
-            sl = slice(len(words) - 1)
-            content_obj = "_".join(words[sl])     
-            
-            if content_obj in listOfCustomFieldObj:
-                for k in record['content'][content_obj].keys():
-                    if "cf_" in k:
-                        event_custom_fields[k] = record['content'][content_obj][k]
-                record['content'][content_obj]['custom_fields'] = json.dumps(event_custom_fields)    
-        
-
-        for key in record.keys():
-            if "cf_" in key:
-                custom_fields[key] = record[key]
-        if custom_fields:
-            record['custom_fields'] = json.dumps(custom_fields)
-        return record
 
     # This overrides the transform_record method in the Fistown Analytics tap-framework package
     def transform_record(self, record):
         with singer.Transformer(integer_datetime_fmt="unix-seconds-integer-datetime-parsing") as tx:
             metadata = {}
             
-            record = self.appendCustomFields(record)
                 
             if self.catalog.metadata is not None:
                 metadata = singer.metadata.to_map(self.catalog.metadata)
@@ -134,22 +117,13 @@ class BaseChargebeeStream(BaseStream):
         # Convert bookmarked start date to POSIX.
         bookmark_date_posix = int(bookmark_date.timestamp())
 
-        # Create params for filtering
-        if self.ENTITY == 'event':
-            params = {"occurred_at[after]": bookmark_date_posix}
-            bookmark_key = 'occurred_at'
-        elif self.ENTITY == 'promotional_credit':
-            params = {"created_at[after]": bookmark_date_posix}
-            bookmark_key = 'created_at'
-        else:
-            params = {"updated_at[after]": bookmark_date_posix}
-            bookmark_key = 'updated_at'
-
+        params = {"resource": self.ENTITY,
+                  "offset": json.dumps([0, bookmark_date_posix])}
+        bookmark_key = 'resource_updated_at'
         LOGGER.info("Querying {} starting at {}".format(table, bookmark_date))
 
         while not done:
             max_date = bookmark_date
-
             response = self.client.make_request(
                 url=self.get_url(),
                 method=api_method,
@@ -160,10 +134,15 @@ class BaseChargebeeStream(BaseStream):
                     LOGGER.error('{} is not configured'.format(response['error_code']))
                     break
 
-            records = response.get('list')
-            
+            if not response.get('rs_data_export_fw_resource'):
+                LOGGER.error('Invalid Response. Missing rs_data_export_fw_resource key')
+                break
+
+            records = response['rs_data_export_fw_resource'].get('list')
+            if not records:
+                LOGGER.info("Final offset reached. Ending sync.")
+                break
             to_write = self.get_stream_data(records)
-            
             if self.ENTITY == 'event':
                 for event in to_write:
                     if event["event_type"] == 'plan_deleted':
@@ -198,12 +177,12 @@ class BaseChargebeeStream(BaseStream):
             self.state = incorporate(
                 self.state, table, 'bookmark_date', max_date)
 
-            if not response.get('next_offset'):
+            if not len(response['rs_data_export_fw_resource'].get('next_offset')):
                 LOGGER.info("Final offset reached. Ending sync.")
                 done = True
             else:
                 LOGGER.info("Advancing by one offset.")
-                params['offset'] = response.get('next_offset')
+                params['offset'] = json.dumps(response['rs_data_export_fw_resource'].get('next_offset'))
                 bookmark_date = max_date
 
         save_state(self.state)

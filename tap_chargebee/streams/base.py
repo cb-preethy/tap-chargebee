@@ -115,10 +115,10 @@ class BaseChargebeeStream(BaseStream):
             bookmark_date = parse(bookmark_date)
 
         # Convert bookmarked start date to POSIX.
-        bookmark_date_posix = int(bookmark_date.timestamp())
+        bookmark_date_posix = int(bookmark_date.timestamp())*1000
 
         params = {"resource": self.ENTITY,
-                  "offset": json.dumps([0, bookmark_date_posix])}
+                  "offset": json.dumps([0, 0, bookmark_date_posix])}
         bookmark_key = 'resource_updated_at'
         LOGGER.info("Querying {} starting at {}".format(table, bookmark_date))
 

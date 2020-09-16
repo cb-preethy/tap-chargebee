@@ -1,0 +1,564 @@
+{
+    "streams": [
+        {
+            "tap_stream_id": "rs_invoices",
+            "stream": "rs_invoices",
+            "schema": {
+                "type": [
+                    "null",
+                    "object"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                    "id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "po_number": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "is_recurring_invoice": {
+                        "type": [
+                            "null",
+                            "boolean"
+                        ]
+                    },
+                    "status": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "vat_number": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "price_type": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "date": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "due_date": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "net_term_days": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "currency_code": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "total": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "amount_paid": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "amount_adjusted": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "write_off_amount": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "credits_applied": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "amount_due": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "paid_at": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "dunning_status": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "next_retry_at": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "voided_at": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "sub_total": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "total_tax_amount": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "is_first_invoice": {
+                        "type": [
+                            "null",
+                            "boolean"
+                        ]
+                    },
+                    "has_advance_charges": {
+                        "type": [
+                            "null",
+                            "boolean"
+                        ]
+                    },
+                    "expected_payment_date": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "amount_to_collect": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "round_off_amount": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "term_finalized": {
+                        "type": [
+                            "null",
+                            "boolean"
+                        ]
+                    },
+                    "is_gifted": {
+                        "type": [
+                            "null",
+                            "boolean"
+                        ]
+                    },
+                    "related_customers": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "related_subscriptions": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "payment_owner": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "customer_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "subscription_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "resource_updated_at": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    }
+                }
+            },
+            "metadata": [
+                {
+                    "breadcrumb": [],
+                    "metadata": {
+                        "forced-replication-method": "INCREMENTAL",
+                        "valid-replication-keys": [
+                            "resource_updated_at"
+                        ],
+                        "inclusion": "automatic",
+                        "table-key-properties": [
+                            "id"
+                        ]
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "po_number"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "is_recurring_invoice"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "status"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "vat_number"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "price_type"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "date"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "due_date"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "net_term_days"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "currency_code"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "total"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "amount_paid"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "amount_adjusted"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "write_off_amount"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "credits_applied"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "amount_due"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "paid_at"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "dunning_status"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "next_retry_at"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "voided_at"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "sub_total"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "total_tax_amount"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "is_first_invoice"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "has_advance_charges"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "expected_payment_date"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "amount_to_collect"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "round_off_amount"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "term_finalized"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "is_gifted"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "related_customers"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "related_subscriptions"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "payment_owner"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "customer_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "subscription_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "resource_updated_at"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -19,8 +19,11 @@ class BaseChargebeeStream(BaseStream):
     if os.environ.get('RS_API_URL'):
         CB_URL = os.environ.get('RS_API_URL')
         #CB_URL = "http://{}.localcb.in:8080/api/v2/rs_data_export_fw_resources"
-    RECORD_LIMIT = 1000
+    RECORD_LIMIT = 100
+    if os.environ.get('RS_API_RECORD_LIMIT'):
+        RECORD_LIMIT = os.environ.get('RS_API_RECORD_LIMIT')
 
+    STATE_FILE_NAME = os.environ.get('CB_RS_STATE_FILE_NAME')
     def write_schema(self):
         singer.write_schema(
             self.catalog.stream,
@@ -105,20 +108,26 @@ class BaseChargebeeStream(BaseStream):
 
         # Attempt to get the bookmark date from the state file (if one exists and is supplied).
         LOGGER.info('Attempting to get the most recent bookmark_date for entity {}.'.format(self.ENTITY))
-        bookmark_date = get_last_record_value_for_table(self.state, table, 'bookmark_date')
+        prev_state = get_last_record_value_for_table(self.state, table, 'last_offset')
 
         # If there is no bookmark date, fall back to using the start date from the config file.
-        if bookmark_date is None:
+        if prev_state is None:
             LOGGER.info('Could not locate bookmark_date from STATE file. Falling back to start_date from config.json instead.')
             bookmark_date = get_config_start_date(self.config)
+            last_processed_id = 0
+            last_processed_dsid = 0
         else:
+            bookmark_date = prev_state['resource_updated_at']
             bookmark_date = parse(bookmark_date)
+            last_processed_id = prev_state.get('last_processed_id', 0)
+            last_processed_dsid = prev_state.get('last_processed_dsid', 0)
 
         # Convert bookmarked start date to POSIX.
-        bookmark_date_posix = int(bookmark_date.timestamp())*1000
+        bookmark_date_posix = int(bookmark_date.timestamp())
 
-        params = {"resource": self.ENTITY,
-                  "offset": json.dumps([0, 0, bookmark_date_posix])}
+        params = {'resource': self.ENTITY,
+                  'offset': json.dumps([last_processed_id, last_processed_dsid, bookmark_date_posix]),
+				  'limit': self.RECORD_LIMIT}
         bookmark_key = 'resource_updated_at'
         LOGGER.info("Querying {} starting at {}".format(table, bookmark_date))
 
@@ -143,23 +152,23 @@ class BaseChargebeeStream(BaseStream):
                 LOGGER.info("Final offset reached. Ending sync.")
                 break
             to_write = self.get_stream_data(records)
-            if self.ENTITY == 'event':
-                for event in to_write:
-                    if event["event_type"] == 'plan_deleted':
-                        Util.plans.append(event['content']['plan'])
-                    elif event['event_type'] == 'addon_deleted':
-                        Util.addons.append(event['content']['addon'])
-                    elif event['event_type'] == 'coupon_deleted':
-                        Util.coupons.append(event['content']['coupon'])
-            if self.ENTITY == 'plan':
-                for plan in Util.plans:
-                    to_write.append(plan)
-            if self.ENTITY == 'addon':
-                for addon in Util.addons:
-                    to_write.append(addon)
-            if self.ENTITY == 'coupon':
-                for coupon in Util.coupons:
-                    to_write.append(coupon) 
+#            if self.ENTITY == 'event':
+#                for event in to_write:
+#                    if event["event_type"] == 'plan_deleted':
+#                        Util.plans.append(event['content']['plan'])
+#                    elif event['event_type'] == 'addon_deleted':
+#                        Util.addons.append(event['content']['addon'])
+#                    elif event['event_type'] == 'coupon_deleted':
+#                        Util.coupons.append(event['content']['coupon'])
+#            if self.ENTITY == 'plan':
+#                for plan in Util.plans:
+#                    to_write.append(plan)
+#            if self.ENTITY == 'addon':
+#                for addon in Util.addons:
+#                    to_write.append(addon)
+#            if self.ENTITY == 'coupon':
+#                for coupon in Util.coupons:
+#                    to_write.append(coupon) 
 
             
             with singer.metrics.record_counter(endpoint=table) as ctr:
@@ -174,8 +183,18 @@ class BaseChargebeeStream(BaseStream):
                         parse(item.get(bookmark_key))
                     )
 
-            self.state = incorporate(
-                self.state, table, 'bookmark_date', max_date)
+            next_offset = response['rs_data_export_fw_resource'].get('next_offset')
+            processed_state = {'resource_updated_at': max_date, 'last_processed_id': 0, 'last_processed_dsid': 0}
+            if next_offset:
+                processed_state['last_processed_id'] = next_offset[0]
+                processed_state['last_processed_dsid'] = next_offset[1]
+            try:
+                self.state = incorporate(
+                    self.state, table, 'last_offset', processed_state)
+                save_state(self.state, self.STATE_FILE_NAME)
+            except Exception as e:
+                LOGGER.error(e)
+                break
 
             if not len(response['rs_data_export_fw_resource'].get('next_offset')):
                 LOGGER.info("Final offset reached. Ending sync.")
@@ -185,4 +204,4 @@ class BaseChargebeeStream(BaseStream):
                 params['offset'] = json.dumps(response['rs_data_export_fw_resource'].get('next_offset'))
                 bookmark_date = max_date
 
-        save_state(self.state)
+#        save_state(self.state)

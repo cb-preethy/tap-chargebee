@@ -10,6 +10,12 @@
                 ],
                 "additionalProperties": false,
                 "properties": {
+                    "site_name": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
                     "id": {
                         "type": [
                             "null",
@@ -75,37 +81,37 @@
                     "total": {
                         "type": [
                             "null",
-                            "integer"
+                            "string"
                         ]
                     },
                     "amount_paid": {
                         "type": [
                             "null",
-                            "integer"
+                            "string"
                         ]
                     },
                     "amount_adjusted": {
                         "type": [
                             "null",
-                            "integer"
+                            "string"
                         ]
                     },
                     "write_off_amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "string"
                         ]
                     },
                     "credits_applied": {
                         "type": [
                             "null",
-                            "integer"
+                            "string"
                         ]
                     },
                     "amount_due": {
                         "type": [
                             "null",
-                            "integer"
+                            "string"
                         ]
                     },
                     "paid_at": {
@@ -138,13 +144,13 @@
                     "sub_total": {
                         "type": [
                             "null",
-                            "integer"
+                            "string"
                         ]
                     },
                     "total_tax_amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "string"
                         ]
                     },
                     "is_first_invoice": {
@@ -169,13 +175,13 @@
                     "amount_to_collect": {
                         "type": [
                             "null",
-                            "integer"
+                            "string"
                         ]
                     },
                     "round_off_amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "string"
                         ]
                     },
                     "term_finalized": {
@@ -241,6 +247,15 @@
                         "table-key-properties": [
                             "id"
                         ]
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "site_name"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
                     }
                 },
                 {

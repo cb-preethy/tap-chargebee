@@ -2,6 +2,9 @@
   "type": ["null", "object"],
   "additionalProperties": false,
   "properties": {
+    "site_name": {
+      "type": ["null", "string"]
+    },
     "id": {
       "type": ["null", "string"]
     },
@@ -35,22 +38,22 @@
       "type": ["null", "string"]
     },
     "total": {
-      "type": ["null", "integer"]
+      "type": ["null", "string"]
     },
     "amount_paid": {
-      "type": ["null", "integer"]
+      "type": ["null", "string"]
     },
     "amount_adjusted": {
-      "type": ["null", "integer"]
+      "type": ["null", "string"]
     },
     "write_off_amount": {
-      "type": ["null", "integer"]
+      "type": ["null", "string"]
     },
     "credits_applied": {
-      "type": ["null", "integer"]
+      "type": ["null", "string"]
     },
     "amount_due": {
-      "type": ["null", "integer"]
+      "type": ["null", "string"]
     },
     "paid_at": {
       "type": ["null", "string"],
@@ -68,10 +71,10 @@
       "format": "date-time"
     },
     "sub_total": {
-      "type": ["null", "integer"]
+      "type": ["null", "string"]
     },
     "total_tax_amount": {
-      "type": ["null", "integer"]
+      "type": ["null", "string"]
     },
     "is_first_invoice": {
       "type": ["null", "boolean"]
@@ -84,10 +87,10 @@
       "format": "date-time"
     },
     "amount_to_collect": {
-      "type": ["null", "integer"]
+      "type": ["null", "string"]
     },
     "round_off_amount": {
-      "type": ["null", "integer"]
+      "type": ["null", "string"]
     },
     "term_finalized": {
       "type": ["null", "boolean"]

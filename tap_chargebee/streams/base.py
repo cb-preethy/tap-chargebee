@@ -15,10 +15,10 @@ LOGGER = singer.get_logger()
 
 
 class BaseChargebeeStream(BaseStream):
-    CB_URL = "https://{}.chargebee.com/api/v2/rs_data_export_fw_resources"
+    CB_URL = "https://{}.chargebee.com/api/v2/rs_data_export_resources"
     if os.environ.get('RS_API_URL'):
         CB_URL = os.environ.get('RS_API_URL')
-        #CB_URL = "http://{}.localcb.in:8080/api/v2/rs_data_export_fw_resources"
+        #CB_URL = "http://{}.localcb.in:8080/api/v2/rs_data_export_resources"
     RECORD_LIMIT = 100
     if os.environ.get('RS_API_RECORD_LIMIT'):
         RECORD_LIMIT = os.environ.get('RS_API_RECORD_LIMIT')
@@ -143,11 +143,11 @@ class BaseChargebeeStream(BaseStream):
                     LOGGER.error('{} is not configured'.format(response['error_code']))
                     break
 
-            if not response.get('rs_data_export_fw_resource'):
-                LOGGER.error('Invalid Response. Missing rs_data_export_fw_resource key')
+            if not response.get('rs_data_export_resource'):
+                LOGGER.error('Invalid Response. Missing rs_data_export_resource key')
                 break
 
-            records = response['rs_data_export_fw_resource'].get('list')
+            records = response['rs_data_export_resource'].get('list')
             if not records:
                 LOGGER.info("Final offset reached. Ending sync.")
                 break
@@ -183,7 +183,7 @@ class BaseChargebeeStream(BaseStream):
                         parse(item.get(bookmark_key))
                     )
 
-            next_offset = response['rs_data_export_fw_resource'].get('next_offset')
+            next_offset = response['rs_data_export_resource'].get('next_offset')
             processed_state = {'resource_updated_at': max_date, 'last_processed_id': 0, 'last_processed_dsid': 0}
             if next_offset:
                 processed_state['last_processed_id'] = next_offset[0]
@@ -196,12 +196,12 @@ class BaseChargebeeStream(BaseStream):
                 LOGGER.error(e)
                 break
 
-            if not len(response['rs_data_export_fw_resource'].get('next_offset')):
+            if not len(response['rs_data_export_resource'].get('next_offset')):
                 LOGGER.info("Final offset reached. Ending sync.")
                 done = True
             else:
                 LOGGER.info("Advancing by one offset.")
-                params['offset'] = json.dumps(response['rs_data_export_fw_resource'].get('next_offset'))
+                params['offset'] = json.dumps(response['rs_data_export_resource'].get('next_offset'))
                 bookmark_date = max_date
 
 #        save_state(self.state)

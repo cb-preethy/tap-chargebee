@@ -8,6 +8,10 @@
     "id": {
       "type": ["null", "string"]
     },
+    "resource_updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
     "po_number": {
       "type": ["null", "string"]
     },
@@ -112,10 +116,6 @@
     },
     "subscription_id": {
       "type": ["null", "string"]
-    },
-    "resource_updated_at": {
-      "type": ["null", "string"],
-      "format": "date-time"
     }
   }
 }   

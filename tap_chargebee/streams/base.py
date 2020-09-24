@@ -131,8 +131,8 @@ class BaseChargebeeStream(BaseStream):
         bookmark_key = 'resource_updated_at'
         LOGGER.info("Querying {} starting at {}".format(table, bookmark_date))
 
+        max_date = bookmark_date
         while not done:
-            max_date = bookmark_date
             response = self.client.make_request(
                 url=self.get_url(),
                 method=api_method,
@@ -203,5 +203,4 @@ class BaseChargebeeStream(BaseStream):
                 LOGGER.info("Advancing by one offset.")
                 params['offset'] = json.dumps(response['rs_data_export_resource'].get('next_offset'))
                 bookmark_date = max_date
-
 #        save_state(self.state)

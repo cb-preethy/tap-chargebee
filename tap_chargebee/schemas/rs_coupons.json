@@ -1,0 +1,71 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "site_name": {
+      "type": ["null", "string"]
+    },
+    "id": {
+      "type": ["null", "string"]
+    },
+    "resource_updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "name": {
+      "type": ["null", "string"]
+    },
+    "invoice_name": {
+      "type": ["null", "string"]
+    },
+    "discount_type": {
+      "type": ["null", "string"]
+    },
+    "discount_percentage": {
+      "type": ["null", "integer"]
+    },
+    "discount_amount": {
+      "type": ["null", "string"]
+    },
+    "currency_code": {
+      "type": ["null", "string"]
+    },
+    "duration_type": {
+      "type": ["null", "string"]
+    },
+    "duration_month": {
+      "type": ["null", "integer"]
+    },
+    "valid_till": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "max_redemptions": {
+      "type": ["null", "integer"]
+    },
+    "status": {
+      "type": ["null", "string"]
+    },
+    "apply_on": {
+      "type": ["null", "string"]
+    },
+    "plan_constraint": {
+      "type": ["null", "string"]
+    },
+    "addon_constraint": {
+      "type": ["null", "string"]
+    },
+    "created_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "archived_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "redemptions": {
+      "type": ["null", "integer"]
+    }
+  }
+}   
+

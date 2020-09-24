@@ -1,0 +1,144 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "site_name": {
+      "type": ["null", "string"]
+    },
+    "id": {
+      "type": ["null", "string"]
+    },
+    "resource_updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "initial_plan_id": {
+      "type": ["null", "string"]
+    },
+    "current_plan_id": {
+      "type": ["null", "boolean"]
+    },
+    "currency_code": {
+      "type": ["null", "string"]
+    },
+    "created_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "activated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "mrr": {
+      "type": ["null", "string"]
+    },
+    "status": {
+      "type": ["null", "string"]
+    },
+    "plan_quantity": {
+      "type": ["null", "integer"]
+    },
+    "plan_unit_price": {
+      "type": ["null", "integer"]
+    },
+    "setup_fee": {
+      "type": ["null", "integer"]
+    },
+    "billing_period": {
+      "type": ["null", "integer"]
+    },
+    "billing_period_unit": {
+      "type": ["null", "string"]
+    },
+    "plan_free_quantity": {
+      "type": ["null", "integer"]
+    },
+    "start_date": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "trial_start": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "trial_end": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "current_term_start": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "current_term_end": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "next_billing_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "remaining_billing_cycles": {
+      "type": ["null", "integer"]
+    },
+    "po_number": {
+      "type": ["null", "integer"],
+      "format": "date-time"
+    },
+    "started_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "cancelled_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "cancel_reason": {
+      "type": ["null", "string"]
+    },
+    "created_from_ip": {
+      "type": ["null", "string"]
+    },
+    "has_scheduled_changes": {
+      "type": ["null", "boolean"]
+    },
+    "payment_source_id": {
+      "type": ["null", "string"]
+    },
+    "auto_collection": {
+      "type": ["null", "string"]
+    },
+    "due_invoice_count": {
+      "type": ["null", "integer"]
+    },
+    "due_since": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "total_dues": {
+      "type": ["null", "integer"]
+    },
+    "initial_active_plan_id": {
+      "type": ["null", "string"]
+    },
+    "product_usage": {
+      "type": ["null", "integer"]
+    },
+    "sales_agent": {
+      "type": ["null", "string"]
+    },
+    "solution_partner": {
+      "type": ["null", "string"]
+    },
+    "acquisition_cost": {
+      "type": ["null", "string"]
+    },
+    "customer_id": {
+      "type": ["null", "string"]
+    },
+    "next_billing_amount": {
+      "type": ["null", "string"]
+    }
+  }
+}   
+
+

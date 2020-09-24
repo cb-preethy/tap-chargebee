@@ -1,6 +1,6 @@
-#from .rs_applied_credits import RsAppliedCreditsStream
+from .rs_applied_credits import RsAppliedCreditsStream
 #from .rs_authrization_payment_mappings import RsAuthrizationPaymentMappingsStream
-#from .rs_coupons import RsCouponsStream
+from .rs_coupons import RsCouponsStream
 #from .rs_credit_note_discount_lines import RsCreditNoteDiscountLinesStream
 #from .rs_credit_note_discounts import RsCreditNoteDiscountsStream
 #from .rs_credit_note_line_items import RsCreditNoteLineItemsStream
@@ -33,15 +33,15 @@ from .rs_invoices import RsInvoicesStream
 #from .rs_quarterly_subscription_histories import RsQuarterlySubscriptionHistoriesStream
 #from .rs_refunds import RsRefundsStream
 #from .rs_subscription_component_histories import RsSubscriptionComponentHistoriesStream
-#from .rs_subscriptions import RsSubscriptionsStream
+from .rs_subscriptions import RsSubscriptionsStream
 #from .rs_transaction_error_details import RsTransactionErrorDetailsStream
 #from .rs_weekly_subscription_histories import RsWeeklySubscriptionHistoriesStream
 #from .rs_yearly_subscription_histories import RsYearlySubscriptionHistoriesStream
 
 AVAILABLE_STREAMS = [
-#    RsAppliedCreditsStream,
+    RsAppliedCreditsStream,
 #    RsAuthrizationPaymentMappingsStream,
-#    RsCouponsStream,
+    RsCouponsStream,
 #    RsCreditNoteDiscountLinesStream,
 #    RsCreditNoteDiscountsStream,
 #    RsCreditNoteLineItemsStream,
@@ -74,7 +74,7 @@ AVAILABLE_STREAMS = [
 #    RsQuarterlySubscriptionHistoriesStream,
 #    RsRefundsStream,
 #    RsSubscriptionComponentHistoriesStream,
-#    RsSubscriptionsStream,
+    RsSubscriptionsStream,
 #    RsTransactionErrorDetailsStream,
 #    RsWeeklySubscriptionHistoriesStream,
 #    RsYearlySubscriptionHistoriesStream,

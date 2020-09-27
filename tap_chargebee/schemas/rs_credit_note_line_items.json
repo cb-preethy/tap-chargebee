@@ -1,0 +1,71 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "site_name": {
+      "type": ["null", "string"]
+    },
+    "id": {
+      "type": ["null", "string"]
+    },
+    "resource_updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "id": {
+      "type": ["null", "string"]
+    },
+    "date_from": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "date_to": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "unit_amount": {
+      "type": ["null", "string"]
+    },
+    "quantity": {
+      "type": ["null", "integer"]
+    },
+    "is_taxed": {
+      "type": ["null", "boolean"]
+    },
+    "tax_amount": {
+      "type": ["null", "string"]
+    },
+    "tax_rate": {
+      "type": ["null", "integer"]
+    },
+    "amount": {
+      "type": ["null", "string"]
+    },
+    "discount_amount": {
+      "type": ["null", "string"]
+    },
+    "item_level_discount_amount": {
+      "type": ["null", "string"]
+    },
+    "description": {
+      "type": ["null", "string"]
+    },
+    "entity_type": {
+      "type": ["null", "string"]
+    },
+    "tax_exempt_reason": {
+      "type": ["null", "string"]
+    },
+    "currency_code": {
+      "type": ["null", "string"]
+    },
+    "credit_note_id": {
+      "type": ["null", "string"]
+    },
+    "credit_note_date": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    }
+  }
+}   
+

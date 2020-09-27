@@ -1,7 +1,7 @@
 from .rs_applied_credits import RsAppliedCreditsStream
 #from .rs_authrization_payment_mappings import RsAuthrizationPaymentMappingsStream
 from .rs_coupons import RsCouponsStream
-#from .rs_credit_note_discount_lines import RsCreditNoteDiscountLinesStream
+from .rs_credit_note_discount_lines import RsCreditNoteDiscountLinesStream
 #from .rs_credit_note_discounts import RsCreditNoteDiscountsStream
 #from .rs_credit_note_line_items import RsCreditNoteLineItemsStream
 #from .rs_credit_note_tax_lines import RsCreditNoteTaxLinesStream
@@ -42,7 +42,7 @@ AVAILABLE_STREAMS = [
     RsAppliedCreditsStream,
 #    RsAuthrizationPaymentMappingsStream,
     RsCouponsStream,
-#    RsCreditNoteDiscountLinesStream,
+    RsCreditNoteDiscountLinesStream,
 #    RsCreditNoteDiscountsStream,
 #    RsCreditNoteLineItemsStream,
 #    RsCreditNoteTaxLinesStream,

@@ -513,6 +513,170 @@
             ]
         },
         {
+            "tap_stream_id": "rs_credit_note_discount_lines",
+            "stream": "rs_credit_note_discount_lines",
+            "schema": {
+                "type": [
+                    "null",
+                    "object"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                    "site_name": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "resource_updated_at": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "discount_amount": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "currency_code": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "discount_type": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "credit_note_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "credit_note_line_item_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "coupon_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    }
+                }
+            },
+            "metadata": [
+                {
+                    "breadcrumb": [],
+                    "metadata": {
+                        "forced-replication-method": "INCREMENTAL",
+                        "valid-replication-keys": [
+                            "resource_updated_at"
+                        ],
+                        "inclusion": "automatic",
+                        "table-key-properties": [
+                            "id"
+                        ]
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "site_name"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "resource_updated_at"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "discount_amount"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "currency_code"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "discount_type"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "credit_note_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "credit_note_line_item_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "coupon_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                }
+            ]
+        },
+        {
             "tap_stream_id": "rs_invoices",
             "stream": "rs_invoices",
             "schema": {

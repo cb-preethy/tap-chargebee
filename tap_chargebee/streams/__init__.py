@@ -10,10 +10,10 @@ from .rs_credit_note_transactions import RsCreditNoteTransactionsStream
 from .rs_credit_notes import RsCreditNotesStream
 from .rs_customers import RsCustomersStream
 #from .rs_daily_subscription_histories import RsDailySubscriptionHistoriesStream
-#from .rs_dunning_details import RsDunningDetailsStream
-#from .rs_invoice_discount_lines import RsInvoiceDiscountLinesStream
-#from .rs_invoice_discounts import RsInvoiceDiscountsStream
-#from .rs_invoice_line_items import RsInvoiceLineItemsStream
+from .rs_dunning_details import RsDunningDetailsStream
+from .rs_invoice_discount_lines import RsInvoiceDiscountLinesStream
+from .rs_invoice_discounts import RsInvoiceDiscountsStream
+from .rs_invoice_line_items import RsInvoiceLineItemsStream
 #from .rs_invoice_tax_lines import RsInvoiceTaxLinesStream
 #from .rs_invoice_taxes import RsInvoiceTaxesStream
 #from .rs_invoice_transactions import RsInvoiceTransactionsStream
@@ -51,10 +51,10 @@ AVAILABLE_STREAMS = [
     RsCreditNotesStream,
     RsCustomersStream,
 #    RsDailySubscriptionHistoriesStream,
-#    RsDunningDetailsStream,
-#    RsInvoiceDiscountLinesStream,
-#    RsInvoiceDiscountsStream,
-#    RsInvoiceLineItemsStream,
+    RsDunningDetailsStream,
+    RsInvoiceDiscountLinesStream,
+    RsInvoiceDiscountsStream,
+    RsInvoiceLineItemsStream,
 #    RsInvoiceTaxLinesStream,
 #    RsInvoiceTaxesStream,
 #    RsInvoiceTransactionsStream,

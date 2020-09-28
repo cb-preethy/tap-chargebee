@@ -1,0 +1,39 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "site_name": {
+      "type": ["null", "string"]
+    },
+    "id": {
+      "type": ["null", "string"]
+    },
+    "resource_updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "transaction_id": {
+      "type": ["null", "string"]
+    },
+    "dunning_type": {
+      "type": ["null", "string"]
+    },
+    "transaction_amount": {
+      "type": ["null", "number"]
+    },
+    "currency_code": {
+      "type": ["null", "string"]
+    },
+    "attempt": {
+      "type": ["null", "number"]
+    },
+    "created_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "invoice_id": {
+      "type": ["null", "string"]
+    }
+  }
+}   
+

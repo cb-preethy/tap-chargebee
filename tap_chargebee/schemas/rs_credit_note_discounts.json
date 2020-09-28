@@ -13,7 +13,7 @@
       "format": "date-time"
     },
     "discount_amount": {
-      "type": ["null", "string"]
+      "type": ["null", "integer"]
     },
     "description": {
       "type": ["null", "string"]

@@ -19,7 +19,7 @@
       "type": ["null", "string"]
     },
     "tax_amount": {
-      "type": ["null", "string"]
+      "type": ["null", "integer"]
     },
     "currency_code": {
       "type": ["null", "string"]

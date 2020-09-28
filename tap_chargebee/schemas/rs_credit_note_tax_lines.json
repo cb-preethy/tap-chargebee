@@ -19,10 +19,10 @@
       "type": ["null", "integer"]
     },
     "tax_amount": {
-      "type": ["null", "string"]
+      "type": ["null", "integer"]
     },
     "taxable_amount": {
-      "type": ["null", "string"]
+      "type": ["null", "integer"]
     },
     "is_non_compliance_tax": {
       "type": ["null", "boolean"]

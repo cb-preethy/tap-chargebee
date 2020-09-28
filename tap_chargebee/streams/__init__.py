@@ -6,9 +6,9 @@ from .rs_credit_note_discounts import RsCreditNoteDiscountsStream
 from .rs_credit_note_line_items import RsCreditNoteLineItemsStream
 from .rs_credit_note_tax_lines import RsCreditNoteTaxLinesStream
 from .rs_credit_note_taxes import RsCreditNoteTaxesStream
-#from .rs_credit_note_transactions import RsCreditNoteTransactionsStream
-#from .rs_credit_notes import RsCreditNotesStream
-#from .rs_customers import RsCustomersStream
+from .rs_credit_note_transactions import RsCreditNoteTransactionsStream
+from .rs_credit_notes import RsCreditNotesStream
+from .rs_customers import RsCustomersStream
 #from .rs_daily_subscription_histories import RsDailySubscriptionHistoriesStream
 #from .rs_dunning_details import RsDunningDetailsStream
 #from .rs_invoice_discount_lines import RsInvoiceDiscountLinesStream
@@ -47,9 +47,9 @@ AVAILABLE_STREAMS = [
     RsCreditNoteLineItemsStream,
     RsCreditNoteTaxLinesStream,
     RsCreditNoteTaxesStream,
-#    RsCreditNoteTransactionsStream,
-#    RsCreditNotesStream,
-#    RsCustomersStream,
+    RsCreditNoteTransactionsStream,
+    RsCreditNotesStream,
+    RsCustomersStream,
 #    RsDailySubscriptionHistoriesStream,
 #    RsDunningDetailsStream,
 #    RsInvoiceDiscountLinesStream,

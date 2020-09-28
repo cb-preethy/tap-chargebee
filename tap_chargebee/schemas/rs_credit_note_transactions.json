@@ -12,24 +12,23 @@
       "type": ["null", "string"],
       "format": "date-time"
     },
-    "discount_amount": {
-      "type": ["null", "integer"]
-    },
     "currency_code": {
       "type": ["null", "string"]
     },
-    "discount_type": {
+    "applied_amount": {
+      "type": ["null", "integer"]
+    },
+    "applied_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "refund_id": {
       "type": ["null", "string"]
     },
     "credit_note_id": {
       "type": ["null", "string"]
-    },
-    "credit_note_line_item_id": {
-      "type": ["null", "string"]
-    },
-    "coupon_id": {
-      "type": ["null", "string"]
     }
   }
 }   
+
 

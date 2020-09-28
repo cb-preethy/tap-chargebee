@@ -32,7 +32,7 @@
                     "amount": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "currency_code": {
@@ -236,7 +236,7 @@
                     "discount_amount": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "currency_code": {
@@ -544,7 +544,7 @@
                     "discount_amount": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "currency_code": {
@@ -708,7 +708,7 @@
                     "discount_amount": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "description": {
@@ -886,7 +886,7 @@
                     "unit_amount": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "quantity": {
@@ -904,7 +904,7 @@
                     "tax_amount": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "tax_rate": {
@@ -916,19 +916,19 @@
                     "amount": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "discount_amount": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "item_level_discount_amount": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "description": {
@@ -1201,13 +1201,13 @@
                     "tax_amount": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "taxable_amount": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "is_non_compliance_tax": {
@@ -1455,7 +1455,7 @@
                     "tax_amount": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "currency_code": {
@@ -1561,6 +1561,1073 @@
             ]
         },
         {
+            "tap_stream_id": "rs_credit_note_transactions",
+            "stream": "rs_credit_note_transactions",
+            "schema": {
+                "type": [
+                    "null",
+                    "object"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                    "site_name": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "resource_updated_at": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "currency_code": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "applied_amount": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "applied_at": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "refund_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "credit_note_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    }
+                }
+            },
+            "metadata": [
+                {
+                    "breadcrumb": [],
+                    "metadata": {
+                        "forced-replication-method": "INCREMENTAL",
+                        "valid-replication-keys": [
+                            "resource_updated_at"
+                        ],
+                        "inclusion": "automatic",
+                        "table-key-properties": [
+                            "id"
+                        ]
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "site_name"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "resource_updated_at"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "currency_code"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "applied_amount"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "applied_at"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "refund_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "credit_note_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                }
+            ]
+        },
+        {
+            "tap_stream_id": "rs_credit_notes",
+            "stream": "rs_credit_notes",
+            "schema": {
+                "type": [
+                    "null",
+                    "object"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                    "site_name": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "resource_updated_at": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "type": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "reason_code": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "status": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "vat_number": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "date": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "price_type": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "currency_code": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "total": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "amount_allocated": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "amount_refunded": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "amount_available": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "refunded_at": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "voided_at": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "sub_total": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "round_off_amount": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "related_customers": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "related_subscriptions": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "invoice_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    }
+                }
+            },
+            "metadata": [
+                {
+                    "breadcrumb": [],
+                    "metadata": {
+                        "forced-replication-method": "INCREMENTAL",
+                        "valid-replication-keys": [
+                            "resource_updated_at"
+                        ],
+                        "inclusion": "automatic",
+                        "table-key-properties": [
+                            "id"
+                        ]
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "site_name"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "resource_updated_at"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "type"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "reason_code"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "status"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "vat_number"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "date"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "price_type"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "currency_code"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "total"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "amount_allocated"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "amount_refunded"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "amount_available"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "refunded_at"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "voided_at"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "sub_total"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "round_off_amount"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "related_customers"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "related_subscriptions"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "invoice_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                }
+            ]
+        },
+        {
+            "tap_stream_id": "rs_customers",
+            "stream": "rs_customers",
+            "schema": {
+                "type": [
+                    "null",
+                    "object"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                    "site_name": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "resource_updated_at": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "first_name": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "last_name": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "email": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "country": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "created_at": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "business_type": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "business_vertical": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "acquisition_cost": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "acquisition_cost_currency_code": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "acquisition_channel": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "acquisition_mode": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "sales_agent": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "customer_type": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "phone": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "company": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "vat_number": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "auto_collection": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "net_term_days": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "allow_direct_debit": {
+                        "type": [
+                            "null",
+                            "boolean"
+                        ]
+                    },
+                    "created_from_ip": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "taxability": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "exempt_category": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "exempt_number": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "consolidated_invoicing": {
+                        "type": [
+                            "null",
+                            "boolean"
+                        ]
+                    },
+                    "billing_day_of_month": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "billing_day_of_week": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "fraud_flag": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "primary_payment_source_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "secondary_payment_source_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "account_manager": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "customer_success_agent": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "solution_partner": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "freemium_blacklist_reason": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    }
+                }
+            },
+            "metadata": [
+                {
+                    "breadcrumb": [],
+                    "metadata": {
+                        "forced-replication-method": "INCREMENTAL",
+                        "valid-replication-keys": [
+                            "resource_updated_at"
+                        ],
+                        "inclusion": "automatic",
+                        "table-key-properties": [
+                            "id"
+                        ]
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "site_name"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "resource_updated_at"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "first_name"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "last_name"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "email"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "country"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "created_at"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "business_type"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "business_vertical"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "acquisition_cost"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "acquisition_cost_currency_code"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "acquisition_channel"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "acquisition_mode"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "sales_agent"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "customer_type"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "phone"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "company"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "vat_number"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "auto_collection"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "net_term_days"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "allow_direct_debit"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "created_from_ip"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "taxability"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "exempt_category"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "exempt_number"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "consolidated_invoicing"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "billing_day_of_month"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "billing_day_of_week"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "fraud_flag"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "primary_payment_source_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "secondary_payment_source_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "account_manager"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "customer_success_agent"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "solution_partner"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "freemium_blacklist_reason"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                }
+            ]
+        },
+        {
             "tap_stream_id": "rs_invoices",
             "stream": "rs_invoices",
             "schema": {
@@ -1648,37 +2715,37 @@
                     "total": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "amount_paid": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "amount_adjusted": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "write_off_amount": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "credits_applied": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "amount_due": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "paid_at": {
@@ -1711,13 +2778,13 @@
                     "sub_total": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "total_tax_amount": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "is_first_invoice": {
@@ -1742,13 +2809,13 @@
                     "amount_to_collect": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "round_off_amount": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "term_finalized": {
@@ -2199,7 +3266,7 @@
                     "mrr": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "status": {
@@ -2389,7 +3456,7 @@
                     "acquisition_cost": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     },
                     "customer_id": {
@@ -2401,7 +3468,7 @@
                     "next_billing_amount": {
                         "type": [
                             "null",
-                            "string"
+                            "integer"
                         ]
                     }
                 }

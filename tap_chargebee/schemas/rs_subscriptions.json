@@ -30,7 +30,7 @@
       "format": "date-time"
     },
     "mrr": {
-      "type": ["null", "string"]
+      "type": ["null", "integer"]
     },
     "status": {
       "type": ["null", "string"]
@@ -130,13 +130,13 @@
       "type": ["null", "string"]
     },
     "acquisition_cost": {
-      "type": ["null", "string"]
+      "type": ["null", "integer"]
     },
     "customer_id": {
       "type": ["null", "string"]
     },
     "next_billing_amount": {
-      "type": ["null", "string"]
+      "type": ["null", "integer"]
     }
   }
 }   

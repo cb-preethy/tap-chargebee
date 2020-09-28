@@ -12,59 +12,62 @@
       "type": ["null", "string"],
       "format": "date-time"
     },
-    "name": {
+    "type": {
       "type": ["null", "string"]
     },
-    "invoice_name": {
+    "reason_code": {
       "type": ["null", "string"]
-    },
-    "discount_type": {
-      "type": ["null", "string"]
-    },
-    "discount_percentage": {
-      "type": ["null", "integer"]
-    },
-    "discount_amount": {
-      "type": ["null", "integer"]
-    },
-    "currency_code": {
-      "type": ["null", "string"]
-    },
-    "duration_type": {
-      "type": ["null", "string"]
-    },
-    "duration_month": {
-      "type": ["null", "integer"]
-    },
-    "valid_till": {
-      "type": ["null", "string"],
-      "format": "date-time"
-    },
-    "max_redemptions": {
-      "type": ["null", "integer"]
     },
     "status": {
       "type": ["null", "string"]
     },
-    "apply_on": {
+    "vat_number": {
       "type": ["null", "string"]
     },
-    "plan_constraint": {
-      "type": ["null", "string"]
-    },
-    "addon_constraint": {
-      "type": ["null", "string"]
-    },
-    "created_at": {
+    "date": {
       "type": ["null", "string"],
       "format": "date-time"
     },
-    "archived_at": {
-      "type": ["null", "string"],
-      "format": "date-time"
+    "price_type": {
+      "type": ["null", "string"]
     },
-    "redemptions": {
+    "currency_code": {
+      "type": ["null", "string"]
+    },
+    "total": {
       "type": ["null", "integer"]
+    },
+    "amount_allocated": {
+      "type": ["null", "integer"]
+    },
+    "amount_refunded": {
+      "type": ["null", "integer"]
+    },
+    "amount_available": {
+      "type": ["null", "integer"]
+    },
+    "refunded_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "voided_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "sub_total": {
+      "type": ["null", "integer"]
+    },
+    "round_off_amount": {
+      "type": ["null", "integer"]
+    },
+    "related_customers": {
+      "type": ["null", "string"]
+    },
+    "related_subscriptions": {
+      "type": ["null", "string"]
+    },
+    "invoice_id": {
+      "type": ["null", "string"]
     }
   }
 }   

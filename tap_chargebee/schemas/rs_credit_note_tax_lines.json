@@ -16,13 +16,13 @@
       "type": ["null", "string"]
     },
     "tax_rate": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "tax_amount": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "taxable_amount": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "is_non_compliance_tax": {
       "type": ["null", "boolean"]

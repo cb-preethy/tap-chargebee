@@ -30,28 +30,28 @@
       "format": "date-time"
     },
     "mrr": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "status": {
       "type": ["null", "string"]
     },
     "plan_quantity": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "plan_unit_price": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "setup_fee": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "billing_period": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "billing_period_unit": {
       "type": ["null", "string"]
     },
     "plan_free_quantity": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "start_date": {
       "type": ["null", "string"],
@@ -78,10 +78,10 @@
       "format": "date-time"
     },
     "remaining_billing_cycles": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "po_number": {
-      "type": ["null", "integer"],
+      "type": ["null", "number"],
       "format": "date-time"
     },
     "started_at": {
@@ -108,20 +108,20 @@
       "type": ["null", "string"]
     },
     "due_invoice_count": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "due_since": {
       "type": ["null", "string"],
       "format": "date-time"
     },
     "total_dues": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "initial_active_plan_id": {
       "type": ["null", "string"]
     },
     "product_usage": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "sales_agent": {
       "type": ["null", "string"]
@@ -130,13 +130,13 @@
       "type": ["null", "string"]
     },
     "acquisition_cost": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "customer_id": {
       "type": ["null", "string"]
     },
     "next_billing_amount": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     }
   }
 }   

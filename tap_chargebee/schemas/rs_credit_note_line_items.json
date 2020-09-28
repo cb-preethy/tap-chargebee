@@ -24,28 +24,28 @@
       "format": "date-time"
     },
     "unit_amount": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "quantity": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "is_taxed": {
       "type": ["null", "boolean"]
     },
     "tax_amount": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "tax_rate": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "amount": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "discount_amount": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "item_level_discount_amount": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "description": {
       "type": ["null", "string"]

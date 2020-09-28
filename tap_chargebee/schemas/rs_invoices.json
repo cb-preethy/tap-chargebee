@@ -36,28 +36,28 @@
       "format": "date-time"
     },
     "net_term_days": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "currency_code": {
       "type": ["null", "string"]
     },
     "total": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "amount_paid": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "amount_adjusted": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "write_off_amount": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "credits_applied": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "amount_due": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "paid_at": {
       "type": ["null", "string"],
@@ -75,10 +75,10 @@
       "format": "date-time"
     },
     "sub_total": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "total_tax_amount": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "is_first_invoice": {
       "type": ["null", "boolean"]
@@ -91,10 +91,10 @@
       "format": "date-time"
     },
     "amount_to_collect": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "round_off_amount": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "term_finalized": {
       "type": ["null", "boolean"]

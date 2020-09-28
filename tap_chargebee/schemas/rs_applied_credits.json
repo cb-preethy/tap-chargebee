@@ -13,7 +13,7 @@
       "format": "date-time"
     },
     "amount": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "currency_code": {
       "type": ["null", "string"]

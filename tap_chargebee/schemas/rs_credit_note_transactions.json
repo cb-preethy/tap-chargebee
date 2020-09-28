@@ -16,7 +16,7 @@
       "type": ["null", "string"]
     },
     "applied_amount": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "applied_at": {
       "type": ["null", "string"],

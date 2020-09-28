@@ -22,10 +22,10 @@
       "type": ["null", "string"]
     },
     "discount_percentage": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "discount_amount": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "currency_code": {
       "type": ["null", "string"]
@@ -34,14 +34,14 @@
       "type": ["null", "string"]
     },
     "duration_month": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "valid_till": {
       "type": ["null", "string"],
       "format": "date-time"
     },
     "max_redemptions": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "status": {
       "type": ["null", "string"]
@@ -64,7 +64,7 @@
       "format": "date-time"
     },
     "redemptions": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     }
   }
 }   

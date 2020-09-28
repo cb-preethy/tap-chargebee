@@ -35,7 +35,7 @@
       "type": ["null", "string"]
     },
     "acquisition_cost": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "acquisition_cost_currency_code": {
       "type": ["null", "string"]
@@ -65,7 +65,7 @@
       "type": ["null", "string"]
     },
     "net_term_days": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "allow_direct_debit": {
       "type": ["null", "boolean"]
@@ -86,7 +86,7 @@
       "type": ["null", "boolean"]
     },
     "billing_day_of_month": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "billing_day_of_week": {
       "type": ["null", "string"]

@@ -35,16 +35,16 @@
       "type": ["null", "string"]
     },
     "total": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "amount_allocated": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "amount_refunded": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "amount_available": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "refunded_at": {
       "type": ["null", "string"],
@@ -55,10 +55,10 @@
       "format": "date-time"
     },
     "sub_total": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "round_off_amount": {
-      "type": ["null", "integer"]
+      "type": ["null", "number"]
     },
     "related_customers": {
       "type": ["null", "string"]

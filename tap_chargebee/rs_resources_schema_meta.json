@@ -32,7 +32,7 @@
                     "amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "currency_code": {
@@ -230,13 +230,13 @@
                     "discount_percentage": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "discount_amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "currency_code": {
@@ -254,7 +254,7 @@
                     "duration_month": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "valid_till": {
@@ -267,7 +267,7 @@
                     "max_redemptions": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "status": {
@@ -311,7 +311,7 @@
                     "redemptions": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     }
                 }
@@ -544,7 +544,7 @@
                     "discount_amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "currency_code": {
@@ -708,7 +708,7 @@
                     "discount_amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "description": {
@@ -886,13 +886,13 @@
                     "unit_amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "quantity": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "is_taxed": {
@@ -904,31 +904,31 @@
                     "tax_amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "tax_rate": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "discount_amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "item_level_discount_amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "description": {
@@ -1195,19 +1195,19 @@
                     "tax_rate": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "tax_amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "taxable_amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "is_non_compliance_tax": {
@@ -1455,7 +1455,7 @@
                     "tax_amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "currency_code": {
@@ -1598,7 +1598,7 @@
                     "applied_amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "applied_at": {
@@ -1785,25 +1785,25 @@
                     "total": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "amount_allocated": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "amount_refunded": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "amount_available": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "refunded_at": {
@@ -1823,13 +1823,13 @@
                     "sub_total": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "round_off_amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "related_customers": {
@@ -2132,7 +2132,7 @@
                     "acquisition_cost": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "acquisition_cost_currency_code": {
@@ -2192,7 +2192,7 @@
                     "net_term_days": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "allow_direct_debit": {
@@ -2234,7 +2234,7 @@
                     "billing_day_of_month": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "billing_day_of_week": {
@@ -2703,7 +2703,7 @@
                     "net_term_days": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "currency_code": {
@@ -2715,37 +2715,37 @@
                     "total": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "amount_paid": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "amount_adjusted": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "write_off_amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "credits_applied": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "amount_due": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "paid_at": {
@@ -2778,13 +2778,13 @@
                     "sub_total": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "total_tax_amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "is_first_invoice": {
@@ -2809,13 +2809,13 @@
                     "amount_to_collect": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "round_off_amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "term_finalized": {
@@ -3266,7 +3266,7 @@
                     "mrr": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "status": {
@@ -3278,25 +3278,25 @@
                     "plan_quantity": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "plan_unit_price": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "setup_fee": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "billing_period": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "billing_period_unit": {
@@ -3308,7 +3308,7 @@
                     "plan_free_quantity": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "start_date": {
@@ -3356,13 +3356,13 @@
                     "remaining_billing_cycles": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "po_number": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ],
                         "format": "date-time"
                     },
@@ -3413,7 +3413,7 @@
                     "due_invoice_count": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "due_since": {
@@ -3426,7 +3426,7 @@
                     "total_dues": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "initial_active_plan_id": {
@@ -3438,7 +3438,7 @@
                     "product_usage": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "sales_agent": {
@@ -3456,7 +3456,7 @@
                     "acquisition_cost": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     },
                     "customer_id": {
@@ -3468,7 +3468,7 @@
                     "next_billing_amount": {
                         "type": [
                             "null",
-                            "integer"
+                            "number"
                         ]
                     }
                 }

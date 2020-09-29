@@ -1,0 +1,65 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "site_name": {
+      "type": ["null", "string"]
+    },
+    "resource_updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "prev_product_group": {
+      "type": ["null", "string"]
+    },
+    "mrr_sub_status": {
+      "type": ["null", "string"]
+    },
+    "mrr_status": {
+      "type": ["null", "string"]
+    },
+    "subscription_id": {
+      "type": ["null", "string"]
+    },
+    "status": {
+      "type": ["null", "string"]
+    },
+    "currency_code": {
+      "type": ["null", "string"]
+    },
+    "period_end": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "period_start": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "cal_date": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "mrr_diff_rate": {
+      "type": ["null", "string"]
+    },
+    "prev_product_mrr": {
+      "type": ["null", "number"]
+    },
+    "primary_product_mrr": {
+      "type": ["null", "number"]
+    },
+    "mrr_fluctuation": {
+      "type": ["null", "number"]
+    },
+    "mrr_diff": {
+      "type": ["null", "number"]
+    },
+    "discount": {
+      "type": ["null", "number"]
+    },
+    "mrr": {
+      "type": ["null", "number"]
+    }
+  }
+}   
+

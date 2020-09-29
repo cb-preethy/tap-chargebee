@@ -9,7 +9,7 @@ from .rs_credit_note_taxes import RsCreditNoteTaxesStream
 from .rs_credit_note_transactions import RsCreditNoteTransactionsStream
 from .rs_credit_notes import RsCreditNotesStream
 from .rs_customers import RsCustomersStream
-#from .rs_daily_subscription_histories import RsDailySubscriptionHistoriesStream
+from .rs_daily_subscription_histories import RsDailySubscriptionHistoriesStream
 from .rs_dunning_details import RsDunningDetailsStream
 from .rs_invoice_discount_lines import RsInvoiceDiscountLinesStream
 from .rs_invoice_discounts import RsInvoiceDiscountsStream
@@ -27,14 +27,14 @@ from .rs_order_line_items import RsOrderLineItemsStream
 from .rs_order_tax_line_items import RsOrderTaxLineItemsStream
 from .rs_orders import RsOrdersStream
 #from .rs_payment_refund_mappings import RsPaymentRefundMappingsStream
-#from .rs_payment_sources import RsPaymentSourcesStream
-#from .rs_payments import RsPaymentsStream
-#from .rs_products import RsProductsStream
+from .rs_payment_sources import RsPaymentSourcesStream
+from .rs_payments import RsPaymentsStream
+from .rs_products import RsProductsStream
 #from .rs_quarterly_subscription_histories import RsQuarterlySubscriptionHistoriesStream
-#from .rs_refunds import RsRefundsStream
+from .rs_refunds import RsRefundsStream
 #from .rs_subscription_component_histories import RsSubscriptionComponentHistoriesStream
 from .rs_subscriptions import RsSubscriptionsStream
-#from .rs_transaction_error_details import RsTransactionErrorDetailsStream
+from .rs_transaction_error_details import RsTransactionErrorDetailsStream
 #from .rs_weekly_subscription_histories import RsWeeklySubscriptionHistoriesStream
 #from .rs_yearly_subscription_histories import RsYearlySubscriptionHistoriesStream
 
@@ -50,7 +50,7 @@ AVAILABLE_STREAMS = [
     RsCreditNoteTransactionsStream,
     RsCreditNotesStream,
     RsCustomersStream,
-#    RsDailySubscriptionHistoriesStream,
+    RsDailySubscriptionHistoriesStream,
     RsDunningDetailsStream,
     RsInvoiceDiscountLinesStream,
     RsInvoiceDiscountsStream,
@@ -68,14 +68,14 @@ AVAILABLE_STREAMS = [
     RsOrderTaxLineItemsStream,
     RsOrdersStream,
 #    RsPaymentRefundMappingsStream,
-#    RsPaymentSourcesStream,
-#    RsPaymentsStream,
-#    RsProductsStream,
+    RsPaymentSourcesStream,
+    RsPaymentsStream,
+    RsProductsStream,
 #    RsQuarterlySubscriptionHistoriesStream,
-#    RsRefundsStream,
+    RsRefundsStream,
 #    RsSubscriptionComponentHistoriesStream,
     RsSubscriptionsStream,
-#    RsTransactionErrorDetailsStream,
+    RsTransactionErrorDetailsStream,
 #    RsWeeklySubscriptionHistoriesStream,
 #    RsYearlySubscriptionHistoriesStream,
 ]

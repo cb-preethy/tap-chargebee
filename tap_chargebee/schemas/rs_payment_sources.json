@@ -1,0 +1,125 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "site_name": {
+      "type": ["null", "string"]
+    },
+    "id": {
+      "type": ["null", "string"]
+    },
+    "resource_updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "type": {
+      "type": ["null", "string"]
+    },
+    "reference_id": {
+      "type": ["null", "string"]
+    },
+    "status": {
+      "type": ["null", "string"]
+    },
+    "gateway": {
+      "type": ["null", "string"]
+    },
+    "gateway_account_id": {
+      "type": ["null", "string"]
+    },
+    "ip_address": {
+      "type": ["null", "string"]
+    },
+    "issuing_country": {
+      "type": ["null", "string"]
+    },
+    "card_first_name": {
+      "type": ["null", "string"]
+    },
+    "card_last_name": {
+      "type": ["null", "string"]
+    },
+    "card_iin": {
+      "type": ["null", "string"]
+    },
+    "card_last4_digit": {
+      "type": ["null", "string"]
+    },
+    "card_brand": {
+      "type": ["null", "string"]
+    },
+    "card_funding_type": {
+      "type": ["null", "string"]
+    },
+    "card_expiry_month": {
+      "type": ["null", "integer"]
+    },
+    "card_expiry_year": {
+      "type": ["null", "integer"]
+    },
+    "card_billing_addr1": {
+      "type": ["null", "string"]
+    },
+    "card_billing_addr2": {
+      "type": ["null", "string"]
+    },
+    "card_billing_city": {
+      "type": ["null", "string"]
+    },
+    "card_billing_state_code": {
+      "type": ["null", "string"]
+    },
+    "card_billing_state": {
+      "type": ["null", "string"]
+    },
+    "card_billing_country": {
+      "type": ["null", "string"]
+    },
+    "card_billing_zip": {
+      "type": ["null", "string"]
+    },
+    "card_masked_number": {
+      "type": ["null", "string"]
+    },
+    "bank_last4_digit": {
+      "type": ["null", "string"]
+    },
+    "bank_name_on_account": {
+      "type": ["null", "string"]
+    },
+    "bank_name": {
+      "type": ["null", "string"]
+    },
+    "bank_mandate_id": {
+      "type": ["null", "string"]
+    },
+    "bank_account_type": {
+      "type": ["null", "string"]
+    },
+    "bank_echeck_type": {
+      "type": ["null", "string"]
+    },
+    "bank_account_holder_type": {
+      "type": ["null", "string"]
+    },
+    "amazon_email": {
+      "type": ["null", "string"]
+    },
+    "amazon_agreement_id": {
+      "type": ["null", "string"]
+    },
+    "paypal_email": {
+      "type": ["null", "string"]
+    },
+    "paypal_agreement_id": {
+      "type": ["null", "string"]
+    },
+    "deleted": {
+      "type": ["null", "boolean"]
+    },
+    "customer_id": {
+      "type": ["null", "string"]
+    }
+  }
+}   
+

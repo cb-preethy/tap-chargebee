@@ -1,0 +1,74 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "site_name": {
+      "type": ["null", "string"]
+    },
+    "id": {
+      "type": ["null", "string"]
+    },
+    "resource_updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "gateway_account_id": {
+      "type": ["null", "string"]
+    },
+    "payment_source_id": {
+      "type": ["null", "string"]
+    },
+    "payment_method": {
+      "type": ["null", "string"]
+    },
+    "reference_number": {
+      "type": ["null", "string"]
+    },
+    "gateway": {
+      "type": ["null", "string"]
+    },
+    "type": {
+      "type": ["null", "string"]
+    },
+    "date": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "settled_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "currency_code": {
+      "type": ["null", "string"]
+    },
+    "amount": {
+      "type": ["null", "number"]
+    },
+    "id_at_gateway": {
+      "type": ["null", "string"]
+    },
+    "status": {
+      "type": ["null", "string"]
+    },
+    "fraud_flag": {
+      "type": ["null", "string"]
+    },
+    "fraud_reason": {
+      "type": ["null", "string"]
+    },
+    "error_code": {
+      "type": ["null", "string"]
+    },
+    "voided_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "masked_card_number": {
+      "type": ["null", "string"]
+    },
+    "subscription_id": {
+      "type": ["null", "string"]
+    }
+  }
+}   
+

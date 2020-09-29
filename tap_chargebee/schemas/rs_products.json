@@ -1,0 +1,95 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "site_name": {
+      "type": ["null", "string"]
+    },
+    "id": {
+      "type": ["null", "string"]
+    },
+    "resource_updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "name": {
+      "type": ["null", "string"]
+    },
+    "invoice_name": {
+      "type": ["null", "string"]
+    },
+    "product_type": {
+      "type": ["null", "string"]
+    },
+    "price": {
+      "type": ["null", "number"]
+    },
+    "currency_code": {
+      "type": ["null", "string"]
+    },
+    "period": {
+      "type": ["null", "number"]
+    },
+    "period_unit": {
+      "type": ["null", "string"]
+    },
+    "charge_model": {
+      "type": ["null", "string"]
+    },
+    "charge_type": {
+      "type": ["null", "string"]
+    },
+    "product_group": {
+      "type": ["null", "string"]
+    },
+    "trial_period": {
+      "type": ["null", "number"]
+    },
+    "trial_period_unit": {
+      "type": ["null", "string"]
+    },
+    "free_quantity": {
+      "type": ["null", "number"]
+    },
+    "setup_cost": {
+      "type": ["null", "number"]
+    },
+    "status": {
+      "type": ["null", "string"]
+    },
+    "billing_cycles": {
+      "type": ["null", "number"]
+    },
+    "enabled_in_hosted_pages": {
+      "type": ["null", "boolean"]
+    },
+    "enabled_in_portal": {
+      "type": ["null", "boolean"]
+    },
+    "sku": {
+      "type": ["null", "string"]
+    },
+    "accounting_code": {
+      "type": ["null", "string"]
+    },
+    "accounting_category1": {
+      "type": ["null", "string"]
+    },
+    "accounting_category2": {
+      "type": ["null", "string"]
+    },
+    "tax_code": {
+      "type": ["null", "string"]
+    },
+    "taxable": {
+      "type": ["null", "boolean"]
+    },
+    "item_type": {
+      "type": ["null", "string"]
+    },
+    "item_id": {
+      "type": ["null", "string"]
+    }
+  }
+}   
+

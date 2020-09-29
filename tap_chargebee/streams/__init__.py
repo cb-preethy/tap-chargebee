@@ -20,12 +20,12 @@ from .rs_invoice_transactions import RsInvoiceTransactionsStream
 from .rs_invoices import RsInvoicesStream
 #from .rs_monthly_subscription_histories import RsMonthlySubscriptionHistoriesStream
 from .rs_old_invoice_line_items import RsOldInvoiceLineItemsStream
-#from .rs_order_addresses import RsOrderAddressesStream
-#from .rs_order_credit_notes import RsOrderCreditNotesStream
-#from .rs_order_discount_line_items import RsOrderDiscountLineItemsStream
-#from .rs_order_line_items import RsOrderLineItemsStream
-#from .rs_order_tax_line_items import RsOrderTaxLineItemsStream
-#from .rs_orders import RsOrdersStream
+from .rs_order_addresses import RsOrderAddressesStream
+from .rs_order_credit_notes import RsOrderCreditNotesStream
+from .rs_order_discount_line_items import RsOrderDiscountLineItemsStream
+from .rs_order_line_items import RsOrderLineItemsStream
+from .rs_order_tax_line_items import RsOrderTaxLineItemsStream
+from .rs_orders import RsOrdersStream
 #from .rs_payment_refund_mappings import RsPaymentRefundMappingsStream
 #from .rs_payment_sources import RsPaymentSourcesStream
 #from .rs_payments import RsPaymentsStream
@@ -61,12 +61,12 @@ AVAILABLE_STREAMS = [
     RsInvoicesStream,
 #    RsMonthlySubscriptionHistoriesStream,
     RsOldInvoiceLineItemsStream,
-#    RsOrderAddressesStream,
-#    RsOrderCreditNotesStream,
-#    RsOrderDiscountLineItemsStream,
-#    RsOrderLineItemsStream,
-#    RsOrderTaxLineItemsStream,
-#    RsOrdersStream,
+    RsOrderAddressesStream,
+    RsOrderCreditNotesStream,
+    RsOrderDiscountLineItemsStream,
+    RsOrderLineItemsStream,
+    RsOrderTaxLineItemsStream,
+    RsOrdersStream,
 #    RsPaymentRefundMappingsStream,
 #    RsPaymentSourcesStream,
 #    RsPaymentsStream,

@@ -1,0 +1,47 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "site_name": {
+      "type": ["null", "string"]
+    },
+    "resource_updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "tax_name": {
+      "type": ["null", "string"]
+    },
+    "tax_rate": {
+      "type": ["null", "number"]
+    },
+    "tax_amount": {
+      "type": ["null", "number"]
+    },
+    "taxable_amount": {
+      "type": ["null", "number"]
+    },
+    "is_non_compliance_tax": {
+      "type": ["null", "boolean"]
+    },
+    "is_partial_tax_applied": {
+      "type": ["null", "boolean"]
+    },
+    "currency_code": {
+      "type": ["null", "string"]
+    },
+    "jurisdiction_type": {
+      "type": ["null", "string"]
+    },
+    "jurisdiction_name": {
+      "type": ["null", "string"]
+    },
+    "jurisdiction_code": {
+      "type": ["null", "string"]
+    },
+    "order_line_item_id": {
+      "type": ["null", "string"]
+    }
+  }
+}   
+

@@ -14,12 +14,12 @@ from .rs_dunning_details import RsDunningDetailsStream
 from .rs_invoice_discount_lines import RsInvoiceDiscountLinesStream
 from .rs_invoice_discounts import RsInvoiceDiscountsStream
 from .rs_invoice_line_items import RsInvoiceLineItemsStream
-#from .rs_invoice_tax_lines import RsInvoiceTaxLinesStream
-#from .rs_invoice_taxes import RsInvoiceTaxesStream
-#from .rs_invoice_transactions import RsInvoiceTransactionsStream
+from .rs_invoice_tax_lines import RsInvoiceTaxLinesStream
+from .rs_invoice_taxes import RsInvoiceTaxesStream
+from .rs_invoice_transactions import RsInvoiceTransactionsStream
 from .rs_invoices import RsInvoicesStream
 #from .rs_monthly_subscription_histories import RsMonthlySubscriptionHistoriesStream
-#from .rs_old_invoice_line_items import RsOldInvoiceLineItemsStream
+from .rs_old_invoice_line_items import RsOldInvoiceLineItemsStream
 #from .rs_order_addresses import RsOrderAddressesStream
 #from .rs_order_credit_notes import RsOrderCreditNotesStream
 #from .rs_order_discount_line_items import RsOrderDiscountLineItemsStream
@@ -55,12 +55,12 @@ AVAILABLE_STREAMS = [
     RsInvoiceDiscountLinesStream,
     RsInvoiceDiscountsStream,
     RsInvoiceLineItemsStream,
-#    RsInvoiceTaxLinesStream,
-#    RsInvoiceTaxesStream,
-#    RsInvoiceTransactionsStream,
+    RsInvoiceTaxLinesStream,
+    RsInvoiceTaxesStream,
+    RsInvoiceTransactionsStream,
     RsInvoicesStream,
 #    RsMonthlySubscriptionHistoriesStream,
-#    RsOldInvoiceLineItemsStream,
+    RsOldInvoiceLineItemsStream,
 #    RsOrderAddressesStream,
 #    RsOrderCreditNotesStream,
 #    RsOrderDiscountLineItemsStream,

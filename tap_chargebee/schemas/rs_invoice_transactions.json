@@ -1,0 +1,31 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "site_name": {
+      "type": ["null", "string"]
+    },
+    "resource_updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "currency_code": {
+      "type": ["null", "string"]
+    },
+    "applied_amount": {
+      "type": ["null", "number"]
+    },
+    "applied_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "payment_id": {
+      "type": ["null", "text"]
+    },
+    "invoice_id": {
+      "type": ["null", "text"]
+    }
+  }
+}   
+
+

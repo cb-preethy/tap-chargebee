@@ -1,0 +1,33 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "site_name": {
+      "type": ["null", "string"]
+    },
+    "resource_updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "tax_name": {
+      "type": ["null", "string"]
+    },
+    "tax_description": {
+      "type": ["null", "string"]
+    },
+    "tax_amount": {
+      "type": ["null", "number"]
+    },
+    "currency_code": {
+      "type": ["null", "string"]
+    },
+    "invoice_id": {
+      "type": ["null", "string"]
+    },
+    "invoice_date": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    }
+  }
+}   
+

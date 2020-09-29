@@ -81,8 +81,7 @@
       "type": ["null", "number"]
     },
     "po_number": {
-      "type": ["null", "number"],
-      "format": "date-time"
+      "type": ["null", "number"]
     },
     "started_at": {
       "type": ["null", "string"],

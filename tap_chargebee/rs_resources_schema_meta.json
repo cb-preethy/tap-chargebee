@@ -4222,8 +4222,7 @@
                         "type": [
                             "null",
                             "number"
-                        ],
-                        "format": "date-time"
+                        ]
                     },
                     "started_at": {
                         "type": [

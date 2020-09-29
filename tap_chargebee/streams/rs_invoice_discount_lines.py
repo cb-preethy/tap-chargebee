@@ -6,7 +6,7 @@ class RsInvoiceDiscountLinesStream(BaseChargebeeStream):
     ENTITY = 'invoice_discount_lines'
     REPLICATION_METHOD = 'INCREMENTAL'
     REPLICATION_KEY = 'resource_updated_at'
-    KEY_PROPERTIES = ['id']
+    KEY_PROPERTIES = ['invoice_line_item_id', 'site_name']
     BOOKMARK_PROPERTIES = ['resource_updated_at']
     SELECTED_BY_DEFAULT = True
     VALID_REPLICATION_KEYS = ['resource_updated_at']

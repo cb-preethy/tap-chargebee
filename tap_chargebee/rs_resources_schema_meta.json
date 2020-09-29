@@ -78,7 +78,8 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
-                            "id"
+                            "credit_note_id",
+                            "site_name"
                         ]
                     }
                 },
@@ -311,7 +312,8 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
-                            "id"
+                            "id",
+                            "site_name"
                         ]
                     }
                 },
@@ -574,7 +576,9 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
-                            "id"
+                            "credit_note_line_item_id",
+                            "credit_note_id",
+                            "site_name"
                         ]
                     }
                 },
@@ -738,7 +742,8 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
-                            "id"
+                            "credit_note_id",
+                            "site_name"
                         ]
                     }
                 },
@@ -965,7 +970,8 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
-                            "id"
+                            "id",
+                            "site_name"
                         ]
                     }
                 },
@@ -1255,7 +1261,9 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
-                            "id"
+                            "credit_note_line_item_id",
+                            "credit_note_id",
+                            "site_name"
                         ]
                     }
                 },
@@ -1467,7 +1475,8 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
-                            "id"
+                            "credit_note_id",
+                            "site_name"
                         ]
                     }
                 },
@@ -1617,7 +1626,8 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
-                            "id"
+                            "credit_note_id",
+                            "site_name"
                         ]
                     }
                 },
@@ -1847,7 +1857,8 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
-                            "id"
+                            "id",
+                            "site_name"
                         ]
                     }
                 },
@@ -2282,7 +2293,8 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
-                            "id"
+                            "id",
+                            "site_name"
                         ]
                     }
                 },
@@ -2696,7 +2708,8 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
-                            "id"
+                            "invoice_id",
+                            "site_name"
                         ]
                     }
                 },
@@ -2870,7 +2883,8 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
-                            "id"
+                            "invoice_line_item_id",
+                            "site_name"
                         ]
                     }
                 },
@@ -3041,7 +3055,8 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
-                            "id"
+                            "invoice_id",
+                            "site_name"
                         ]
                     }
                 },
@@ -3283,7 +3298,8 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
-                            "id"
+                            "id",
+                            "site_name"
                         ]
                     }
                 },
@@ -3714,7 +3730,8 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
-                            "id"
+                            "id",
+                            "site_name"
                         ]
                     }
                 },
@@ -4325,7 +4342,8 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
-                            "id"
+                            "id",
+                            "site_name"
                         ]
                     }
                 },

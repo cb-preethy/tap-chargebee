@@ -16,12 +16,6 @@
                             "string"
                         ]
                     },
-                    "id": {
-                        "type": [
-                            "null",
-                            "string"
-                        ]
-                    },
                     "resource_updated_at": {
                         "type": [
                             "null",
@@ -92,15 +86,6 @@
                     "breadcrumb": [
                         "properties",
                         "site_name"
-                    ],
-                    "metadata": {
-                        "inclusion": "automatic"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "id"
                     ],
                     "metadata": {
                         "inclusion": "automatic"

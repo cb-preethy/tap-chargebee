@@ -5,9 +5,6 @@
     "site_name": {
       "type": ["null", "string"]
     },
-    "id": {
-      "type": ["null", "string"]
-    },
     "resource_updated_at": {
       "type": ["null", "string"],
       "format": "date-time"

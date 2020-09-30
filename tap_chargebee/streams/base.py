@@ -13,10 +13,6 @@ from tap_chargebee.state import get_last_record_value_for_table, incorporate, \
 
 LOGGER = singer.get_logger()
 
-singer.utils.DATETIME_PARSE = "%Y-%m-%dT%H:%M:%S"
-singer.utils.DATETIME_FMT = "%04Y-%m-%dT%H:%M:%S.%f"
-singer.utils.DATETIME_FMT_MAC = "%Y-%m-%dT%H:%M:%S.%f"
-
 class BaseChargebeeStream(BaseStream):
     CB_URL = "https://{}.chargebee.com/api/v2/rs_data_export_resources"
     if os.environ.get('RS_API_URL'):
@@ -86,6 +82,15 @@ class BaseChargebeeStream(BaseStream):
         }]
 
 
+    def remove_timezone(self, record):
+        transformed_record = record
+        resource_schema = self.catalog.schema.to_dict().get('properties')
+        for item in resource_schema:
+            column_schema = resource_schema[item]
+            if column_schema.get('format') and column_schema['format'] == 'date-time':
+                transformed_record[item] = transformed_record[item].strip('Z')
+        return transformed_record
+
     # This overrides the transform_record method in the Fistown Analytics tap-framework package
     def transform_record(self, record):
         with singer.Transformer(integer_datetime_fmt="unix-seconds-integer-datetime-parsing") as tx:
@@ -95,10 +100,11 @@ class BaseChargebeeStream(BaseStream):
             if self.catalog.metadata is not None:
                 metadata = singer.metadata.to_map(self.catalog.metadata)
 
-            return tx.transform(
+            singer_transform = tx.transform(
                 record,
                 self.catalog.schema.to_dict(),
                 metadata)
+            return self.remove_timezone(singer_transform)
 
     def get_stream_data(self, data):
         entity = self.ENTITY
@@ -121,7 +127,7 @@ class BaseChargebeeStream(BaseStream):
             last_processed_dsid = 0
         else:
             bookmark_date = prev_state['resource_updated_at']
-            bookmark_date = parse(bookmark_date)
+            bookmark_date = parse(bookmark_date,ignoretz=True)
             last_processed_id = prev_state.get('last_processed_id', 0)
             last_processed_dsid = prev_state.get('last_processed_dsid', 0)
 
@@ -183,7 +189,7 @@ class BaseChargebeeStream(BaseStream):
                     #if item.get(bookmark_key) is not None:
                     max_date = max(
                         max_date,
-                        parse(item.get(bookmark_key))
+                        parse(item.get(bookmark_key),ignoretz=True)
                     )
 
             next_offset = response['rs_data_export_resource'].get('next_offset')

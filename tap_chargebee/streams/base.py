@@ -13,6 +13,9 @@ from tap_chargebee.state import get_last_record_value_for_table, incorporate, \
 
 LOGGER = singer.get_logger()
 
+singer.utils.DATETIME_PARSE = "%Y-%m-%dT%H:%M:%S"
+singer.utils.DATETIME_FMT = "%04Y-%m-%dT%H:%M:%S.%f"
+singer.utils.DATETIME_FMT_MAC = "%Y-%m-%dT%H:%M:%S.%f"
 
 class BaseChargebeeStream(BaseStream):
     CB_URL = "https://{}.chargebee.com/api/v2/rs_data_export_resources"
@@ -118,7 +121,7 @@ class BaseChargebeeStream(BaseStream):
             last_processed_dsid = 0
         else:
             bookmark_date = prev_state['resource_updated_at']
-            bookmark_date = parse(bookmark_date)
+            bookmark_date = parse(bookmark_date, ignoretz=True)
             last_processed_id = prev_state.get('last_processed_id', 0)
             last_processed_dsid = prev_state.get('last_processed_dsid', 0)
 

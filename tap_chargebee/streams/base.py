@@ -121,7 +121,7 @@ class BaseChargebeeStream(BaseStream):
             last_processed_dsid = 0
         else:
             bookmark_date = prev_state['resource_updated_at']
-            bookmark_date = parse(bookmark_date, ignoretz=True)
+            bookmark_date = parse(bookmark_date)
             last_processed_id = prev_state.get('last_processed_id', 0)
             last_processed_dsid = prev_state.get('last_processed_dsid', 0)
 

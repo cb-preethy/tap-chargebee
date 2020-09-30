@@ -88,7 +88,7 @@ class BaseChargebeeStream(BaseStream):
         for item in resource_schema:
             column_schema = resource_schema[item]
             if column_schema.get('format') and column_schema['format'] == 'date-time':
-                if transformed_record[item]:
+                if isinstance(transformed_record[item], str) and len(transformed_record[item]) > 0:
                     transformed_record[item] = transformed_record[item].strip('Z')
         return transformed_record
 

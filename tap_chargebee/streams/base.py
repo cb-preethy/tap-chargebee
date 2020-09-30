@@ -88,7 +88,8 @@ class BaseChargebeeStream(BaseStream):
         for item in resource_schema:
             column_schema = resource_schema[item]
             if column_schema.get('format') and column_schema['format'] == 'date-time':
-                transformed_record[item] = transformed_record[item].strip('Z')
+                if transformed_record[item]:
+                    transformed_record[item] = transformed_record[item].strip('Z')
         return transformed_record
 
     # This overrides the transform_record method in the Fistown Analytics tap-framework package

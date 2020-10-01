@@ -6,7 +6,7 @@ class RsCreditNoteDiscountLinesStream(BaseChargebeeStream):
     ENTITY = 'credit_note_discount_lines'
     REPLICATION_METHOD = 'INCREMENTAL'
     REPLICATION_KEY = 'resource_updated_at'
-    KEY_PROPERTIES = ['credit_note_line_item_id', 'credit_note_id', 'site_name']
+    KEY_PROPERTIES = ['site_name', 'credit_note_id', 'credit_note_line_item_id', 'coupon_id', 'invoice_id']
     BOOKMARK_PROPERTIES = ['resource_updated_at']
     SELECTED_BY_DEFAULT = True
     VALID_REPLICATION_KEYS = ['resource_updated_at']

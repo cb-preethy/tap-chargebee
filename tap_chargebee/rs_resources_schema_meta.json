@@ -77,7 +77,11 @@
                             "resource_updated_at"
                         ],
                         "inclusion": "automatic",
-                        "table-key-properties": []
+                        "table-key-properties": [
+                            "site_name",
+                            "invoice_id",
+                            "credit_note_id"
+                        ]
                     }
                 },
                 {
@@ -573,9 +577,11 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
-                            "credit_note_line_item_id",
+                            "site_name",
                             "credit_note_id",
-                            "site_name"
+                            "credit_note_line_item_id",
+                            "coupon_id",
+                            "invoice_id"
                         ]
                     }
                 },
@@ -739,8 +745,10 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
+                            "site_name",
                             "credit_note_id",
-                            "site_name"
+                            "coupon_id",
+                            "invoice_id"
                         ]
                     }
                 },
@@ -967,8 +975,10 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
+                            "site_name",
                             "id",
-                            "site_name"
+                            "invoice_id",
+                            "credit_note_id"
                         ]
                     }
                 },
@@ -1258,9 +1268,10 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
-                            "credit_note_line_item_id",
+                            "site_name",
                             "credit_note_id",
-                            "site_name"
+                            "credit_note_line_item_id",
+                            "invoice_id"
                         ]
                     }
                 },
@@ -1472,8 +1483,9 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
+                            "site_name",
                             "credit_note_id",
-                            "site_name"
+                            "invoice_id"
                         ]
                     }
                 },
@@ -1623,8 +1635,9 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
+                            "site_name",
                             "credit_note_id",
-                            "site_name"
+                            "refund_id"
                         ]
                     }
                 },
@@ -1855,7 +1868,8 @@
                         "inclusion": "automatic",
                         "table-key-properties": [
                             "id",
-                            "site_name"
+                            "site_name",
+                            "invoice_id"
                         ]
                     }
                 },
@@ -3009,7 +3023,8 @@
                         "inclusion": "automatic",
                         "table-key-properties": [
                             "invoice_id",
-                            "site_name"
+                            "site_name",
+                            "transaction_id"
                         ]
                     }
                 },
@@ -3183,8 +3198,10 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
+                            "site_name",
                             "invoice_line_item_id",
-                            "site_name"
+                            "coupon_id",
+                            "invoice_id"
                         ]
                     }
                 },
@@ -3356,7 +3373,8 @@
                         "inclusion": "automatic",
                         "table-key-properties": [
                             "invoice_id",
-                            "site_name"
+                            "site_name",
+                            "coupon_id"
                         ]
                     }
                 },
@@ -3599,7 +3617,8 @@
                         "inclusion": "automatic",
                         "table-key-properties": [
                             "id",
-                            "site_name"
+                            "site_name",
+                            "invoice_id"
                         ]
                     }
                 },
@@ -3893,8 +3912,10 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
+                            "site_name",
+                            "invoice_id",
                             "invoice_line_item_id",
-                            "site_name"
+                            "tax_name"
                         ]
                     }
                 },
@@ -4099,7 +4120,8 @@
                         "inclusion": "automatic",
                         "table-key-properties": [
                             "invoice_id",
-                            "site_name"
+                            "site_name",
+                            "tax_name"
                         ]
                     }
                 },
@@ -5293,7 +5315,8 @@
                         "table-key-properties": [
                             "order_id",
                             "site_name",
-                            "site_name"
+                            "invoice_id",
+                            "address_type"
                         ]
                     }
                 },
@@ -5564,7 +5587,8 @@
                         "table-key-properties": [
                             "order_id",
                             "credit_note_id",
-                            "site_name"
+                            "site_name",
+                            "invoice_id"
                         ]
                     }
                 },
@@ -5726,7 +5750,9 @@
                         "inclusion": "automatic",
                         "table-key-properties": [
                             "order_line_item_id",
-                            "site_name"
+                            "site_name",
+                            "order_id",
+                            "coupon_id"
                         ]
                     }
                 },
@@ -5957,7 +5983,8 @@
                         "inclusion": "automatic",
                         "table-key-properties": [
                             "id",
-                            "site_name"
+                            "site_name",
+                            "order_id"
                         ]
                     }
                 },
@@ -6272,7 +6299,9 @@
                         "inclusion": "automatic",
                         "table-key-properties": [
                             "order_line_item_id",
-                            "site_name"
+                            "site_name",
+                            "order_id",
+                            "tax_name"
                         ]
                     }
                 },
@@ -7277,7 +7306,8 @@
                         "inclusion": "automatic",
                         "table-key-properties": [
                             "id",
-                            "site_name"
+                            "site_name",
+                            "customer_id"
                         ]
                     }
                 },

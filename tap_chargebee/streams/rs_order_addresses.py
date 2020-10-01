@@ -6,7 +6,7 @@ class RsOrderAddressesStream(BaseChargebeeStream):
     ENTITY = 'order_addresses'
     REPLICATION_METHOD = 'INCREMENTAL'
     REPLICATION_KEY = 'resource_updated_at'
-    KEY_PROPERTIES = ['order_id', 'site_name', 'site_name']
+    KEY_PROPERTIES = ['order_id', 'site_name', 'invoice_id', 'address_type']
     BOOKMARK_PROPERTIES = ['resource_updated_at']
     SELECTED_BY_DEFAULT = True
     VALID_REPLICATION_KEYS = ['resource_updated_at']

@@ -77,10 +77,7 @@
                             "resource_updated_at"
                         ],
                         "inclusion": "automatic",
-                        "table-key-properties": [
-                            "credit_note_id",
-                            "site_name"
-                        ]
+                        "table-key-properties": []
                     }
                 },
                 {

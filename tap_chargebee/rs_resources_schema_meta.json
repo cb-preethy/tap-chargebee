@@ -564,6 +564,12 @@
                             "null",
                             "string"
                         ]
+                    },
+                    "invoice_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
                     }
                 }
             },
@@ -665,6 +671,15 @@
                     "metadata": {
                         "inclusion": "automatic"
                     }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "invoice_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
                 }
             ]
         },
@@ -728,6 +743,12 @@
                         ]
                     },
                     "coupon_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "invoice_id": {
                         "type": [
                             "null",
                             "string"
@@ -828,6 +849,15 @@
                     "breadcrumb": [
                         "properties",
                         "coupon_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "invoice_id"
                     ],
                     "metadata": {
                         "inclusion": "automatic"
@@ -962,6 +992,12 @@
                             "string"
                         ],
                         "format": "date-time"
+                    },
+                    "invoice_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
                     }
                 }
             },
@@ -1152,6 +1188,15 @@
                     "metadata": {
                         "inclusion": "automatic"
                     }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "invoice_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
                 }
             ]
         },
@@ -1251,6 +1296,12 @@
                         ]
                     },
                     "credit_note_line_item_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "invoice_id": {
                         "type": [
                             "null",
                             "string"
@@ -1409,6 +1460,15 @@
                     "metadata": {
                         "inclusion": "automatic"
                     }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "invoice_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
                 }
             ]
         },
@@ -1466,6 +1526,12 @@
                         ]
                     },
                     "credit_note_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "invoice_id": {
                         "type": [
                             "null",
                             "string"
@@ -1556,6 +1622,15 @@
                     "breadcrumb": [
                         "properties",
                         "credit_note_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "invoice_id"
                     ],
                     "metadata": {
                         "inclusion": "automatic"
@@ -3185,6 +3260,12 @@
                             "string"
                         ],
                         "format": "date-time"
+                    },
+                    "invoice_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
                     }
                 }
             },
@@ -3281,6 +3362,15 @@
                     "breadcrumb": [
                         "properties",
                         "invoice_date"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "invoice_id"
                     ],
                     "metadata": {
                         "inclusion": "automatic"
@@ -3899,6 +3989,12 @@
                             "string"
                         ],
                         "format": "date-time"
+                    },
+                    "invoice_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
                     }
                 }
             },
@@ -4040,6 +4136,15 @@
                     "breadcrumb": [
                         "properties",
                         "invoice_date"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "invoice_id"
                     ],
                     "metadata": {
                         "inclusion": "automatic"
@@ -5314,6 +5419,12 @@
                             "null",
                             "string"
                         ]
+                    },
+                    "invoice_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
                     }
                 }
             },
@@ -5423,6 +5534,15 @@
                     "metadata": {
                         "inclusion": "automatic"
                     }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "invoice_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
                 }
             ]
         },
@@ -5474,6 +5594,12 @@
                         ]
                     },
                     "coupon_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "order_id": {
                         "type": [
                             "null",
                             "string"
@@ -5556,6 +5682,15 @@
                     "breadcrumb": [
                         "properties",
                         "coupon_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "order_id"
                     ],
                     "metadata": {
                         "inclusion": "automatic"
@@ -6027,6 +6162,12 @@
                             "null",
                             "string"
                         ]
+                    },
+                    "order_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
                     }
                 }
             },
@@ -6159,6 +6300,15 @@
                     "breadcrumb": [
                         "properties",
                         "order_line_item_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "order_id"
                     ],
                     "metadata": {
                         "inclusion": "automatic"

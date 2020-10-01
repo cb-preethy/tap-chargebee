@@ -41,6 +41,9 @@
     },
     "order_line_item_id": {
       "type": ["null", "string"]
+    },
+    "order_id": {
+      "type": ["null", "string"]
     }
   }
 }   

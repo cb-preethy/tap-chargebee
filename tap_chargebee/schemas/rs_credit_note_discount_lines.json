@@ -29,6 +29,9 @@
     },
     "coupon_id": {
       "type": ["null", "string"]
+    },
+    "invoice_id": {
+      "type": ["null", "string"]
     }
   }
 }   

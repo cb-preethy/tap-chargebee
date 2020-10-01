@@ -23,6 +23,9 @@
     },
     "coupon_id": {
       "type": ["null", "string"]
+    },
+    "order_id": {
+      "type": ["null", "string"]
     }
   }
 }   

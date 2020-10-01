@@ -47,6 +47,9 @@
     },
     "credit_note_line_item_id": {
       "type": ["null", "string"]
+    },
+    "invoice_id": {
+      "type": ["null", "string"]
     }
   }
 }   

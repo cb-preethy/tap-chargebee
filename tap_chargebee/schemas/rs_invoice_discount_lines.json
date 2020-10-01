@@ -30,6 +30,9 @@
     "invoice_date": {
       "type": ["null", "string"],
       "format": "date-time"
+    },
+    "invoice_id": {
+      "type": ["null", "string"]
     }
   }
 }   

@@ -82,15 +82,15 @@ class BaseChargebeeStream(BaseStream):
         }]
 
 
-    def remove_timezone(self, record):
-        transformed_record = record
-        resource_schema = self.catalog.schema.to_dict().get('properties')
-        for item in resource_schema:
-            column_schema = resource_schema[item]
-            if column_schema.get('format') and column_schema['format'] == 'date-time':
-                if isinstance(transformed_record[item], str) and len(transformed_record[item]) > 0:
-                    transformed_record[item] = transformed_record[item].strip('Z')
-        return transformed_record
+#    def remove_timezone(self, record):
+#        transformed_record = record
+#        resource_schema = self.catalog.schema.to_dict().get('properties')
+#        for item in resource_schema:
+#            column_schema = resource_schema[item]
+#            if column_schema.get('format') and column_schema['format'] == 'date-time':
+#                if isinstance(transformed_record[item], str) and len(transformed_record[item]) > 0:
+#                    transformed_record[item] = transformed_record[item].strip('Z')
+#        return transformed_record
 
     # This overrides the transform_record method in the Fistown Analytics tap-framework package
     def transform_record(self, record):
@@ -105,7 +105,8 @@ class BaseChargebeeStream(BaseStream):
                 record,
                 self.catalog.schema.to_dict(),
                 metadata)
-            return self.remove_timezone(singer_transform)
+#            return self.remove_timezone(singer_transform)
+            return singer_transform
 
     def get_stream_data(self, data):
         entity = self.ENTITY

@@ -2735,12 +2735,6 @@
                         ],
                         "format": "date-time"
                     },
-                    "prev_product_group": {
-                        "type": [
-                            "null",
-                            "string"
-                        ]
-                    },
                     "mrr_sub_status": {
                         "type": [
                             "null",
@@ -2785,36 +2779,12 @@
                         ],
                         "format": "date-time"
                     },
-                    "cal_date": {
+                    "date": {
                         "type": [
                             "null",
                             "string"
                         ],
                         "format": "date-time"
-                    },
-                    "mrr_diff_rate": {
-                        "type": [
-                            "null",
-                            "string"
-                        ]
-                    },
-                    "prev_product_mrr": {
-                        "type": [
-                            "null",
-                            "number"
-                        ]
-                    },
-                    "primary_product_mrr": {
-                        "type": [
-                            "null",
-                            "number"
-                        ]
-                    },
-                    "mrr_fluctuation": {
-                        "type": [
-                            "null",
-                            "number"
-                        ]
                     },
                     "mrr_diff": {
                         "type": [
@@ -2846,6 +2816,7 @@
                         ],
                         "inclusion": "automatic",
                         "table-key-properties": [
+                            "date",
                             "subscription_id",
                             "site_name"
                         ]
@@ -2864,15 +2835,6 @@
                     "breadcrumb": [
                         "properties",
                         "resource_updated_at"
-                    ],
-                    "metadata": {
-                        "inclusion": "automatic"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "prev_product_group"
                     ],
                     "metadata": {
                         "inclusion": "automatic"
@@ -2944,43 +2906,7 @@
                 {
                     "breadcrumb": [
                         "properties",
-                        "cal_date"
-                    ],
-                    "metadata": {
-                        "inclusion": "automatic"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "mrr_diff_rate"
-                    ],
-                    "metadata": {
-                        "inclusion": "automatic"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "prev_product_mrr"
-                    ],
-                    "metadata": {
-                        "inclusion": "automatic"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "primary_product_mrr"
-                    ],
-                    "metadata": {
-                        "inclusion": "automatic"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "mrr_fluctuation"
+                        "date"
                     ],
                     "metadata": {
                         "inclusion": "automatic"
@@ -5027,6 +4953,235 @@
                     "breadcrumb": [
                         "properties",
                         "subscription_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                }
+            ]
+        },
+        {
+            "tap_stream_id": "rs_monthly_subscription_histories",
+            "stream": "rs_monthly_subscription_histories",
+            "schema": {
+                "type": [
+                    "null",
+                    "object"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                    "site_name": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "resource_updated_at": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "mrr_sub_status": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "mrr_status": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "subscription_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "status": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "currency_code": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "period_end": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "period_start": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "date": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "mrr_diff": {
+                        "type": [
+                            "null",
+                            "number"
+                        ]
+                    },
+                    "discount": {
+                        "type": [
+                            "null",
+                            "number"
+                        ]
+                    },
+                    "mrr": {
+                        "type": [
+                            "null",
+                            "number"
+                        ]
+                    }
+                }
+            },
+            "metadata": [
+                {
+                    "breadcrumb": [],
+                    "metadata": {
+                        "forced-replication-method": "INCREMENTAL",
+                        "valid-replication-keys": [
+                            "resource_updated_at"
+                        ],
+                        "inclusion": "automatic",
+                        "table-key-properties": [
+                            "date",
+                            "subscription_id",
+                            "site_name"
+                        ]
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "site_name"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "resource_updated_at"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "mrr_sub_status"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "mrr_status"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "subscription_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "status"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "currency_code"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "period_end"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "period_start"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "date"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "mrr_diff"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "discount"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "mrr"
                     ],
                     "metadata": {
                         "inclusion": "automatic"
@@ -8432,6 +8587,235 @@
             ]
         },
         {
+            "tap_stream_id": "rs_quarterly_subscription_histories",
+            "stream": "rs_quarterly_subscription_histories",
+            "schema": {
+                "type": [
+                    "null",
+                    "object"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                    "site_name": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "resource_updated_at": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "mrr_sub_status": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "mrr_status": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "subscription_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "status": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "currency_code": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "period_end": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "period_start": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "date": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "mrr_diff": {
+                        "type": [
+                            "null",
+                            "number"
+                        ]
+                    },
+                    "discount": {
+                        "type": [
+                            "null",
+                            "number"
+                        ]
+                    },
+                    "mrr": {
+                        "type": [
+                            "null",
+                            "number"
+                        ]
+                    }
+                }
+            },
+            "metadata": [
+                {
+                    "breadcrumb": [],
+                    "metadata": {
+                        "forced-replication-method": "INCREMENTAL",
+                        "valid-replication-keys": [
+                            "resource_updated_at"
+                        ],
+                        "inclusion": "automatic",
+                        "table-key-properties": [
+                            "date",
+                            "subscription_id",
+                            "site_name"
+                        ]
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "site_name"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "resource_updated_at"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "mrr_sub_status"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "mrr_status"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "subscription_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "status"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "currency_code"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "period_end"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "period_start"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "date"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "mrr_diff"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "discount"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "mrr"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                }
+            ]
+        },
+        {
             "tap_stream_id": "rs_refunds",
             "stream": "rs_refunds",
             "schema": {
@@ -9428,6 +9812,464 @@
                     "breadcrumb": [
                         "properties",
                         "next_billing_amount"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                }
+            ]
+        },
+        {
+            "tap_stream_id": "rs_weekly_subscription_histories",
+            "stream": "rs_weekly_subscription_histories",
+            "schema": {
+                "type": [
+                    "null",
+                    "object"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                    "site_name": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "resource_updated_at": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "mrr_sub_status": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "mrr_status": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "subscription_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "status": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "currency_code": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "period_end": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "period_start": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "date": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "mrr_diff": {
+                        "type": [
+                            "null",
+                            "number"
+                        ]
+                    },
+                    "discount": {
+                        "type": [
+                            "null",
+                            "number"
+                        ]
+                    },
+                    "mrr": {
+                        "type": [
+                            "null",
+                            "number"
+                        ]
+                    }
+                }
+            },
+            "metadata": [
+                {
+                    "breadcrumb": [],
+                    "metadata": {
+                        "forced-replication-method": "INCREMENTAL",
+                        "valid-replication-keys": [
+                            "resource_updated_at"
+                        ],
+                        "inclusion": "automatic",
+                        "table-key-properties": [
+                            "date",
+                            "subscription_id",
+                            "site_name"
+                        ]
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "site_name"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "resource_updated_at"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "mrr_sub_status"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "mrr_status"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "subscription_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "status"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "currency_code"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "period_end"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "period_start"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "date"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "mrr_diff"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "discount"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "mrr"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                }
+            ]
+        },
+        {
+            "tap_stream_id": "rs_yearly_subscription_histories",
+            "stream": "rs_yearly_subscription_histories",
+            "schema": {
+                "type": [
+                    "null",
+                    "object"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                    "site_name": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "resource_updated_at": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "mrr_sub_status": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "mrr_status": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "subscription_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "status": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "currency_code": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "period_end": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "period_start": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "date": {
+                        "type": [
+                            "null",
+                            "string"
+                        ],
+                        "format": "date-time"
+                    },
+                    "mrr_diff": {
+                        "type": [
+                            "null",
+                            "number"
+                        ]
+                    },
+                    "discount": {
+                        "type": [
+                            "null",
+                            "number"
+                        ]
+                    },
+                    "mrr": {
+                        "type": [
+                            "null",
+                            "number"
+                        ]
+                    }
+                }
+            },
+            "metadata": [
+                {
+                    "breadcrumb": [],
+                    "metadata": {
+                        "forced-replication-method": "INCREMENTAL",
+                        "valid-replication-keys": [
+                            "resource_updated_at"
+                        ],
+                        "inclusion": "automatic",
+                        "table-key-properties": [
+                            "date",
+                            "subscription_id",
+                            "site_name"
+                        ]
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "site_name"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "resource_updated_at"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "mrr_sub_status"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "mrr_status"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "subscription_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "status"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "currency_code"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "period_end"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "period_start"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "date"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "mrr_diff"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "discount"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "mrr"
                     ],
                     "metadata": {
                         "inclusion": "automatic"

@@ -18,7 +18,7 @@ from .rs_invoice_tax_lines import RsInvoiceTaxLinesStream
 from .rs_invoice_taxes import RsInvoiceTaxesStream
 from .rs_invoice_transactions import RsInvoiceTransactionsStream
 from .rs_invoices import RsInvoicesStream
-#from .rs_monthly_subscription_histories import RsMonthlySubscriptionHistoriesStream
+from .rs_monthly_subscription_histories import RsMonthlySubscriptionHistoriesStream
 #from .rs_old_invoice_line_items import RsOldInvoiceLineItemsStream
 from .rs_order_addresses import RsOrderAddressesStream
 from .rs_order_credit_notes import RsOrderCreditNotesStream
@@ -30,13 +30,13 @@ from .rs_orders import RsOrdersStream
 from .rs_payment_sources import RsPaymentSourcesStream
 from .rs_payments import RsPaymentsStream
 from .rs_products import RsProductsStream
-#from .rs_quarterly_subscription_histories import RsQuarterlySubscriptionHistoriesStream
+from .rs_quarterly_subscription_histories import RsQuarterlySubscriptionHistoriesStream
 from .rs_refunds import RsRefundsStream
 #from .rs_subscription_component_histories import RsSubscriptionComponentHistoriesStream
 from .rs_subscriptions import RsSubscriptionsStream
 #from .rs_transaction_error_details import RsTransactionErrorDetailsStream
-#from .rs_weekly_subscription_histories import RsWeeklySubscriptionHistoriesStream
-#from .rs_yearly_subscription_histories import RsYearlySubscriptionHistoriesStream
+from .rs_weekly_subscription_histories import RsWeeklySubscriptionHistoriesStream
+from .rs_yearly_subscription_histories import RsYearlySubscriptionHistoriesStream
 
 AVAILABLE_STREAMS = [
     RsAppliedCreditsStream,
@@ -59,7 +59,7 @@ AVAILABLE_STREAMS = [
     RsInvoiceTaxesStream,
     RsInvoiceTransactionsStream,
     RsInvoicesStream,
-#    RsMonthlySubscriptionHistoriesStream,
+    RsMonthlySubscriptionHistoriesStream,
 #    RsOldInvoiceLineItemsStream,
     RsOrderAddressesStream,
     RsOrderCreditNotesStream,
@@ -71,11 +71,11 @@ AVAILABLE_STREAMS = [
     RsPaymentSourcesStream,
     RsPaymentsStream,
     RsProductsStream,
-#    RsQuarterlySubscriptionHistoriesStream,
+    RsQuarterlySubscriptionHistoriesStream,
     RsRefundsStream,
 #    RsSubscriptionComponentHistoriesStream,
     RsSubscriptionsStream,
 #    RsTransactionErrorDetailsStream,
-#    RsWeeklySubscriptionHistoriesStream,
-#    RsYearlySubscriptionHistoriesStream,
+    RsWeeklySubscriptionHistoriesStream,
+    RsYearlySubscriptionHistoriesStream,
 ]

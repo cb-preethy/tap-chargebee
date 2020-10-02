@@ -1,9 +1,9 @@
 from tap_chargebee.streams.base import BaseChargebeeStream
 
 
-class RsDailySubscriptionHistoriesStream(BaseChargebeeStream):
-    TABLE = 'rs_daily_subscription_histories'
-    ENTITY = 'daily_subscription_histories'
+class RsMonthlySubscriptionHistoriesStream(BaseChargebeeStream):
+    TABLE = 'rs_monthly_subscription_histories'
+    ENTITY = 'monthly_subscription_histories'
     REPLICATION_METHOD = 'INCREMENTAL'
     REPLICATION_KEY = 'resource_updated_at'
     KEY_PROPERTIES = ['date', 'subscription_id', 'site_name']

@@ -24,6 +24,9 @@
     "is_recurring_invoice": {
       "type": ["null", "boolean"]
     },
+    "is_non_compliance_tax": {
+      "type": ["null", "boolean"]
+    },
     "is_partial_tax_applied": {
       "type": ["null", "boolean"]
     },

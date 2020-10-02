@@ -3949,6 +3949,12 @@
                             "boolean"
                         ]
                     },
+                    "is_non_compliance_tax": {
+                        "type": [
+                            "null",
+                            "boolean"
+                        ]
+                    },
                     "is_partial_tax_applied": {
                         "type": [
                             "null",
@@ -4075,6 +4081,15 @@
                     "breadcrumb": [
                         "properties",
                         "is_recurring_invoice"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "is_non_compliance_tax"
                     ],
                     "metadata": {
                         "inclusion": "automatic"

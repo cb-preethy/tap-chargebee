@@ -22,7 +22,7 @@ def incorporate(state, table, key, value, force=False):
         return state
 
     if isinstance(value['resource_updated_at'], datetime.datetime):
-        value['resource_updated_at'] = value['resource_updated_at'].strftime('%Y-%m-%dT%H:%M:%SZ')
+        value['resource_updated_at'] = value['resource_updated_at'].strftime('%Y-%m-%d %H:%M:%S.%fZ')
 
     if state is None:
         new_state = {}

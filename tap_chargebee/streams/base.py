@@ -94,7 +94,7 @@ class BaseChargebeeStream(BaseStream):
 
     # This overrides the transform_record method in the Fistown Analytics tap-framework package
     def transform_record(self, record):
-        with singer.Transformer(integer_datetime_fmt="unix-seconds-integer-datetime-parsing") as tx:
+        with singer.Transformer(integer_datetime_fmt="unix-milliseconds-integer-datetime-parsing") as tx:
             metadata = {}
             
                 
@@ -134,7 +134,7 @@ class BaseChargebeeStream(BaseStream):
             last_processed_dsid = prev_state.get('last_processed_dsid', 0)
 
         # Convert bookmarked start date to POSIX.
-        bookmark_date_posix = int(bookmark_date.timestamp()) * 1000 # file doesnt have ms
+        bookmark_date_posix = int(bookmark_date.timestamp()*1000)
 
         params = {'resource': self.ENTITY,
                   'offset': json.dumps([last_processed_id, last_processed_dsid, bookmark_date_posix]),

@@ -3027,7 +3027,8 @@
                         "table-key-properties": [
                             "invoice_id",
                             "site_name",
-                            "transaction_id"
+                            "transaction_id",
+                            "attempt"
                         ]
                     }
                 },

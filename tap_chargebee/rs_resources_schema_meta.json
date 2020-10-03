@@ -2994,6 +2994,12 @@
                             "string"
                         ]
                     },
+                    "attempt": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
                     "created_at": {
                         "type": [
                             "null",
@@ -3021,7 +3027,8 @@
                         "table-key-properties": [
                             "invoice_id",
                             "site_name",
-                            "transaction_id"
+                            "transaction_id",
+                            "attempt"
                         ]
                     }
                 },
@@ -3083,6 +3090,15 @@
                     "breadcrumb": [
                         "properties",
                         "currency_code"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "attempt"
                     ],
                     "metadata": {
                         "inclusion": "automatic"

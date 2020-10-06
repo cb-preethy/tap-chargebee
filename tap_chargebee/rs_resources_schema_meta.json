@@ -8316,7 +8316,8 @@
                         "inclusion": "automatic",
                         "table-key-properties": [
                             "id",
-                            "site_name"
+                            "site_name",
+                            "product_type"
                         ]
                     }
                 },

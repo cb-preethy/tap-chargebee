@@ -6,7 +6,7 @@ class RsProductsStream(BaseChargebeeStream):
     ENTITY = 'products'
     REPLICATION_METHOD = 'INCREMENTAL'
     REPLICATION_KEY = 'resource_updated_at'
-    KEY_PROPERTIES = ['id', 'site_name']
+    KEY_PROPERTIES = ['id', 'site_name', 'product_type']
     BOOKMARK_PROPERTIES = ['resource_updated_at']
     SELECTED_BY_DEFAULT = True
     VALID_REPLICATION_KEYS = ['resource_updated_at']

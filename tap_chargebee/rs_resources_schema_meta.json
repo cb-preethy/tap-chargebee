@@ -8290,18 +8290,6 @@
                             "null",
                             "boolean"
                         ]
-                    },
-                    "item_type": {
-                        "type": [
-                            "null",
-                            "string"
-                        ]
-                    },
-                    "item_id": {
-                        "type": [
-                            "null",
-                            "string"
-                        ]
                     }
                 }
             },
@@ -8559,24 +8547,6 @@
                     "breadcrumb": [
                         "properties",
                         "taxable"
-                    ],
-                    "metadata": {
-                        "inclusion": "automatic"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "item_type"
-                    ],
-                    "metadata": {
-                        "inclusion": "automatic"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "item_id"
                     ],
                     "metadata": {
                         "inclusion": "automatic"

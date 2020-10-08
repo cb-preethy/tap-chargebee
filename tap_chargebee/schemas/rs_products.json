@@ -83,12 +83,6 @@
     },
     "taxable": {
       "type": ["null", "boolean"]
-    },
-    "item_type": {
-      "type": ["null", "string"]
-    },
-    "item_id": {
-      "type": ["null", "string"]
     }
   }
 }   

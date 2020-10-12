@@ -17,7 +17,6 @@ class BaseChargebeeStream(BaseStream):
     CB_URL = "https://{}.chargebee.com/api/v2/rs_data_export_resources"
     if os.environ.get('RS_API_URL'):
         CB_URL = os.environ.get('RS_API_URL')
-        #CB_URL = "http://{}.localcb.in:8080/api/v2/rs_data_export_resources"
     RECORD_LIMIT = 100
     if os.environ.get('RS_API_RECORD_LIMIT'):
         RECORD_LIMIT = os.environ.get('RS_API_RECORD_LIMIT')
@@ -82,15 +81,6 @@ class BaseChargebeeStream(BaseStream):
         }]
 
 
-#    def remove_timezone(self, record):
-#        transformed_record = record
-#        resource_schema = self.catalog.schema.to_dict().get('properties')
-#        for item in resource_schema:
-#            column_schema = resource_schema[item]
-#            if column_schema.get('format') and column_schema['format'] == 'date-time':
-#                if isinstance(transformed_record[item], str) and len(transformed_record[item]) > 0:
-#                    transformed_record[item] = transformed_record[item].strip('Z')
-#        return transformed_record
 
     # This overrides the transform_record method in the Fistown Analytics tap-framework package
     def transform_record(self, record):
@@ -105,7 +95,6 @@ class BaseChargebeeStream(BaseStream):
                 record,
                 self.catalog.schema.to_dict(),
                 metadata)
-#            return self.remove_timezone(singer_transform)
             return singer_transform
 
     def get_stream_data(self, data):
@@ -163,23 +152,6 @@ class BaseChargebeeStream(BaseStream):
                 LOGGER.info("Final offset reached. Ending sync.")
                 break
             to_write = self.get_stream_data(records)
-#            if self.ENTITY == 'event':
-#                for event in to_write:
-#                    if event["event_type"] == 'plan_deleted':
-#                        Util.plans.append(event['content']['plan'])
-#                    elif event['event_type'] == 'addon_deleted':
-#                        Util.addons.append(event['content']['addon'])
-#                    elif event['event_type'] == 'coupon_deleted':
-#                        Util.coupons.append(event['content']['coupon'])
-#            if self.ENTITY == 'plan':
-#                for plan in Util.plans:
-#                    to_write.append(plan)
-#            if self.ENTITY == 'addon':
-#                for addon in Util.addons:
-#                    to_write.append(addon)
-#            if self.ENTITY == 'coupon':
-#                for coupon in Util.coupons:
-#                    to_write.append(coupon) 
 
             
             with singer.metrics.record_counter(endpoint=table) as ctr:
@@ -188,7 +160,6 @@ class BaseChargebeeStream(BaseStream):
                 ctr.increment(amount=len(to_write))
                 
                 for item in to_write:
-                    #if item.get(bookmark_key) is not None:
                     max_date = max(
                         max_date,
                         parse(item.get(bookmark_key),ignoretz=True)
@@ -214,4 +185,3 @@ class BaseChargebeeStream(BaseStream):
                 LOGGER.info("Advancing by one offset.")
                 params['offset'] = json.dumps(response['rs_data_export_resource'].get('next_offset'))
                 bookmark_date = max_date
-#        save_state(self.state)

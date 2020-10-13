@@ -2781,7 +2781,8 @@
                         "type": [
                             "null",
                             "string"
-                        ]
+                        ],
+                        "format": "date-time"
                     },
                     "mrr_diff": {
                         "type": [
@@ -5031,7 +5032,8 @@
                         "type": [
                             "null",
                             "string"
-                        ]
+                        ],
+                        "format": "date-time"
                     },
                     "mrr_diff": {
                         "type": [
@@ -6703,7 +6705,8 @@
                         "type": [
                             "null",
                             "string"
-                        ]
+                        ],
+                        "format": "date-time"
                     },
                     "mrr_diff": {
                         "type": [
@@ -7935,7 +7938,8 @@
                         "type": [
                             "null",
                             "string"
-                        ]
+                        ],
+                        "format": "date-time"
                     },
                     "mrr_diff": {
                         "type": [
@@ -8163,7 +8167,8 @@
                         "type": [
                             "null",
                             "string"
-                        ]
+                        ],
+                        "format": "date-time"
                     },
                     "mrr_diff": {
                         "type": [

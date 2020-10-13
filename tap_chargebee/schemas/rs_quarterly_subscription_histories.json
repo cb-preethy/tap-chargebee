@@ -33,7 +33,8 @@
       "format": "date-time"
     },
     "date": {
-      "type": ["null", "string"]
+      "type": ["null", "string"],
+      "format": "date-time"
     },
     "mrr_diff": {
       "type": ["null", "number"]
